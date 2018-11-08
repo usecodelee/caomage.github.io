@@ -71,7 +71,7 @@
 
 
 
-  <meta name="keywords" content="ES6,">
+  <meta name="keywords" content="JavaScript,">
 
 
 
@@ -82,18 +82,26 @@
 
 
 
-<meta name="description" content="ES6（一）：let和const一、let1. let基本用法&amp;emsp;&amp;emsp;相当于var,但是又与var不同，因为let声明的变量只能在let所在的代码块中有效。&amp;emsp;&amp;emsp;从以下两段代码以及对应的输出结果可以很明显的看出var与let的区别。code： 1234for (var i = 0; i &amp;lt; 5; i++) &amp;#123;    console.log(i);&amp;">
-<meta name="keywords" content="ES6">
+<meta name="description" content="js实现截图并保存图片在本地html转canvas、canvas转image需要的库html2canvas.js和canvas2image.js话不多说，直接上代码！   codeHTML：   12345678910111213141516171819202122232425262728293031323334&amp;lt;h2&amp;gt;原始HTML&amp;lt;/h2&amp;gt;&amp;lt;div style=&quot;b">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ES6（一）：let和const">
-<meta property="og:url" content="http://yoursite.com/2018/10/31/letandconst/index.html">
+<meta property="og:title" content="js实现截图并保存图片在本地(html转canvas、canvas转image)">
+<meta property="og:url" content="http://yoursite.com/2018/07/23/htmltoimg/index.html">
 <meta property="og:site_name" content="CAOMAGE">
-<meta property="og:description" content="ES6（一）：let和const一、let1. let基本用法&amp;emsp;&amp;emsp;相当于var,但是又与var不同，因为let声明的变量只能在let所在的代码块中有效。&amp;emsp;&amp;emsp;从以下两段代码以及对应的输出结果可以很明显的看出var与let的区别。code： 1234for (var i = 0; i &amp;lt; 5; i++) &amp;#123;    console.log(i);&amp;">
+<meta property="og:description" content="js实现截图并保存图片在本地html转canvas、canvas转image需要的库html2canvas.js和canvas2image.js话不多说，直接上代码！   codeHTML：   12345678910111213141516171819202122232425262728293031323334&amp;lt;h2&amp;gt;原始HTML&amp;lt;/h2&amp;gt;&amp;lt;div style=&quot;b">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-08T14:39:22.943Z">
+<meta property="og:image" content="https://i.imgur.com/XVrhUMt.png">
+<meta property="og:image" content="https://i.imgur.com/N0MU9Cq.png">
+<meta property="og:image" content="https://i.imgur.com/n78ucIw.png">
+<meta property="og:image" content="https://i.imgur.com/oEdNa3m.png">
+<meta property="og:image" content="https://i.imgur.com/mL7VqVC.png">
+<meta property="og:image" content="https://i.imgur.com/NWUW91n.png">
+<meta property="og:image" content="https://i.imgur.com/wDX8Vhe.png">
+<meta property="og:updated_time" content="2018-11-08T14:57:10.898Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ES6（一）：let和const">
-<meta name="twitter:description" content="ES6（一）：let和const一、let1. let基本用法&amp;emsp;&amp;emsp;相当于var,但是又与var不同，因为let声明的变量只能在let所在的代码块中有效。&amp;emsp;&amp;emsp;从以下两段代码以及对应的输出结果可以很明显的看出var与let的区别。code： 1234for (var i = 0; i &amp;lt; 5; i++) &amp;#123;    console.log(i);&amp;">
+<meta name="twitter:title" content="js实现截图并保存图片在本地(html转canvas、canvas转image)">
+<meta name="twitter:description" content="js实现截图并保存图片在本地html转canvas、canvas转image需要的库html2canvas.js和canvas2image.js话不多说，直接上代码！   codeHTML：   12345678910111213141516171819202122232425262728293031323334&amp;lt;h2&amp;gt;原始HTML&amp;lt;/h2&amp;gt;&amp;lt;div style=&quot;b">
+<meta name="twitter:image" content="https://i.imgur.com/XVrhUMt.png">
 
 
 
@@ -123,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/10/31/letandconst/">
+  <link rel="canonical" href="http://yoursite.com/2018/07/23/htmltoimg/">
 
 
 
 
 
-    <title>ES6（一）：let和const | CAOMAGE</title>
+    <title>js实现截图并保存图片在本地(html转canvas、canvas转image) | CAOMAGE</title>
     
 
 
@@ -295,7 +303,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/31/letandconst/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/23/htmltoimg/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="caomage">
@@ -312,7 +320,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ES6（一）：let和const</h1>
+          <h1 class="post-title" itemprop="name headline">js实现截图并保存图片在本地(html转canvas、canvas转image)</h1>
         
 
         <div class="post-meta">
@@ -324,8 +332,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-31T22:33:05+08:00">
-                2018-10-31
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-23T12:55:42+08:00">
+                2018-07-23
               </time>
             
 
@@ -347,8 +355,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/ES6/" itemprop="url" rel="index">
-                    <span itemprop="name">ES6</span>
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
                   </a>
                 </span>
 
@@ -364,7 +372,7 @@
 
           
           
-             <span id="/2018/10/31/letandconst/" class="leancloud_visitors" data-flag-title="ES6（一）：let和const">
+             <span id="/2018/07/23/htmltoimg/" class="leancloud_visitors" data-flag-title="js实现截图并保存图片在本地(html转canvas、canvas转image)">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -390,7 +398,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.4k
+                  657
                 </span>
               
 
@@ -406,7 +414,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5
+                  3
                 </span>
               
             </div>
@@ -427,50 +435,28 @@
       
 
       
-        <h1 id="ES6（一）：let和const"><a href="#ES6（一）：let和const" class="headerlink" title="ES6（一）：let和const"></a>ES6（一）：let和const</h1><h2 id="一、let"><a href="#一、let" class="headerlink" title="一、let"></a>一、let</h2><h3 id="1-let基本用法"><a href="#1-let基本用法" class="headerlink" title="1. let基本用法"></a>1. let基本用法</h3><p>&emsp;&emsp;相当于var,但是又与var不同，因为let声明的变量只能在let所在的代码块中有效。<br>&emsp;&emsp;从以下两段代码以及对应的输出结果可以很明显的看出var与let的区别。<br><strong><em>code：</em></strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(i);</span><br></pre></td></tr></table></figure>
-<p><strong><em>result：</em></strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">5</span></span><br></pre></td></tr></table></figure>
-<p><strong><em>code：</em></strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(i);</span><br></pre></td></tr></table></figure>
-<p><strong><em>result：</em></strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="built_in">ReferenceError</span>: i is not defined</span><br></pre></td></tr></table></figure>
-<h3 id="2-块级作用域"><a href="#2-块级作用域" class="headerlink" title="2. 块级作用域"></a>2. 块级作用域</h3><p>&emsp;&emsp;众所周知，在ES5中只有全局作用域和函数作用域，没有我们所谓的块级作用域。<br>&emsp;&emsp;这不禁让我想起一个面试题：<br><strong><em>code：</em></strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">    setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">new</span> <span class="built_in">Date</span>, i);</span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">new</span> <span class="built_in">Date</span>, i);</span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;问：上面这段代码输出的结果是什么？<br>&emsp;&emsp;仔细琢磨一下我们很容易得出正确的答案：  </p>
-<p><strong><em>result：</em></strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2018</span><span class="number">-10</span><span class="number">-31</span>T06:<span class="number">55</span>:<span class="number">30.020</span>Z <span class="number">5</span></span><br><span class="line"><span class="number">2018</span><span class="number">-10</span><span class="number">-31</span>T06:<span class="number">55</span>:<span class="number">31.021</span>Z <span class="number">5</span></span><br><span class="line"><span class="number">2018</span><span class="number">-10</span><span class="number">-31</span>T06:<span class="number">55</span>:<span class="number">31.021</span>Z <span class="number">5</span></span><br><span class="line"><span class="number">2018</span><span class="number">-10</span><span class="number">-31</span>T06:<span class="number">55</span>:<span class="number">31.022</span>Z <span class="number">5</span></span><br><span class="line"><span class="number">2018</span><span class="number">-10</span><span class="number">-31</span>T06:<span class="number">55</span>:<span class="number">31.022</span>Z <span class="number">5</span></span><br><span class="line"><span class="number">2018</span><span class="number">-10</span><span class="number">-31</span>T06:<span class="number">55</span>:<span class="number">31.022</span>Z <span class="number">5</span></span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;仔细看一下发现：由于setTimeout会被JavaScript延迟执行，因此是先输出最底部的console.log，隔一秒之后再执行循环里面的consol.log,此时i已经全部是5。<br>&emsp;&emsp;那我们怎么样才能使输出结果变成想要的0,1,2,3,4呢？<br>&emsp;&emsp;明白了let的原理之后其实问题变得很简单：<br><strong><em>code：</em></strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">    setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">new</span> <span class="built_in">Date</span>, i);</span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">new</span> <span class="built_in">Date</span>, i);</span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;这样就行了吗？<br><strong><em>result：</em></strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ReferenceError</span>: i is not defined</span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;哈哈，刚刚还说过let只在所在的代码块里面有效，这里最外层的console.log很明显找不到i，所以报出引用错误。想要得到正确答案其实还需要去掉最后一行console.log。<br>&emsp;&emsp;当然这个题目要搁以前的话，首先想到的解决方案应该是IIFE（Immediately Invoked Function Expression：声明即执行的函数表达式）来解决闭包造成的问题。<br><strong><em>code：</em></strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params">j</span>) </span>&#123;  </span><br><span class="line">        setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="keyword">new</span> <span class="built_in">Date</span>, j);</span><br><span class="line">        &#125;, <span class="number">1000</span>);</span><br><span class="line">    &#125;)(i);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">new</span> <span class="built_in">Date</span>, i);</span><br></pre></td></tr></table></figure>
-<p><strong><em>result：</em></strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2018</span><span class="number">-10</span><span class="number">-31</span>T07:<span class="number">17</span>:<span class="number">45.825</span>Z <span class="number">5</span></span><br><span class="line"><span class="number">2018</span><span class="number">-10</span><span class="number">-31</span>T07:<span class="number">17</span>:<span class="number">46.827</span>Z <span class="number">0</span></span><br><span class="line"><span class="number">2018</span><span class="number">-10</span><span class="number">-31</span>T07:<span class="number">17</span>:<span class="number">46.827</span>Z <span class="number">1</span></span><br><span class="line"><span class="number">2018</span><span class="number">-10</span><span class="number">-31</span>T07:<span class="number">17</span>:<span class="number">46.827</span>Z <span class="number">2</span></span><br><span class="line"><span class="number">2018</span><span class="number">-10</span><span class="number">-31</span>T07:<span class="number">17</span>:<span class="number">46.827</span>Z <span class="number">3</span></span><br><span class="line"><span class="number">2018</span><span class="number">-10</span><span class="number">-31</span>T07:<span class="number">17</span>:<span class="number">46.827</span>Z <span class="number">4</span></span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;由此我们是不是就可以得出一个结论，有了let，我们就可以抛弃IIFE了？<br>&emsp;&emsp;这个暂时还不好说，我们还是继续看看let的其他特性。</p>
-<h3 id="3-没有变量提升"><a href="#3-没有变量提升" class="headerlink" title="3. 没有变量提升"></a>3. 没有变量提升</h3><p>&emsp;&emsp;var命令会产生变量提升的现象，这使得js这门语言变得并不严谨，这一点是特点也是鸡肋。用var声明的变量，如果我们在声明之前使用，则它的值为undefined。<br>&emsp;&emsp;而当我们用let定义变量时，就必须严格按照先定义再使用的原则了，反之则会抛出一个大大的引用错误（ReferenceError），显然这更符合人们的使用习惯。<br><strong><em>code：</em></strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(a);</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(b);</span><br><span class="line"><span class="keyword">let</span> b = <span class="number">2</span>;</span><br></pre></td></tr></table></figure>
-<p><strong><em>result：</em></strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">undefined</span></span><br><span class="line"><span class="built_in">ReferenceError</span>: b is not defined</span><br></pre></td></tr></table></figure>
-<h3 id="4-暂时性死区及不能重复声明"><a href="#4-暂时性死区及不能重复声明" class="headerlink" title="4. 暂时性死区及不能重复声明"></a>4. 暂时性死区及不能重复声明</h3><p>&emsp;&emsp;ES6 明确规定，如果区块中存在let和const命令，这个区块对这些命令声明的变量，从一开始就形成了封闭作用域。凡是在声明之前就使用这些变量，就会报错。<br>&emsp;&emsp;总之，在代码块内，使用let命令声明变量之前，该变量都是不可用的。这在语法上，称为“暂时性死区”（temporal dead zone，简称 TDZ）。<br>&emsp;&emsp;“暂时性死区”也意味着typeof不再是一个百分之百安全的操作。<br>&emsp;&emsp;let不允许在相同作用域内，重复声明同一个变量。</p>
-<h2 id="二、const"><a href="#二、const" class="headerlink" title="二、const"></a>二、const</h2><h3 id="1-const基本用法"><a href="#1-const基本用法" class="headerlink" title="1. const基本用法"></a>1. const基本用法</h3><p>&emsp;&emsp;const命令是声明一个常量，用法和let一样。</p>
-<ul>
-<li>和let的相同之处是：<ul>
-<li>const与let作用域相同，都是只在声明的代码块中起作用</li>
-<li>const也不会提升所声明的常量</li>
-<li>const也不能重复声明</li>
-</ul>
-</li>
-<li>不同之处是const声明的常量在声明时就必须赋值，因为一旦声明就不能改变改常量的值</li>
-</ul>
-<h3 id="2-真的不能改变吗？"><a href="#2-真的不能改变吗？" class="headerlink" title="2. 真的不能改变吗？"></a>2. 真的不能改变吗？</h3><p>&emsp;&emsp;const实际上保证的，并不是变量的值不得改动，而是变量指向的那个内存地址所保存的数据不得改动。对于简单类型的数据（数值、字符串、布尔值），值就保存在变量指向的那个内存地址，因此等同于常量。但对于复合类型的数据（主要是对象和数组），变量指向的内存地址，保存的只是一个指向实际数据的指针，const只能保证这个指针是固定的（即总是指向另一个固定的地址），至于它指向的数据结构是不是可变的，就完全不能控制了。因此，将一个对象声明为常量必须非常小心。<br><strong><em>code&amp;result：</em></strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a=<span class="number">1</span>;</span><br><span class="line">a=<span class="number">2</span>;<span class="comment">//TypeError</span></span><br><span class="line"><span class="keyword">const</span> obj=&#123;</span><br><span class="line">    b:<span class="number">3</span>,</span><br><span class="line">    c:<span class="number">4</span></span><br><span class="line">&#125;</span><br><span class="line">obj.b=<span class="number">5</span>;</span><br><span class="line"><span class="built_in">console</span>.log(obj);<span class="comment">//&#123;b:5,c:4&#125;</span></span><br></pre></td></tr></table></figure>
-<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
-<li><a href="http://es6.ruanyifeng.com/#docs/let#let-%E5%91%BD%E4%BB%A4" target="_blank" rel="noopener">《ECMAScript 6 入门》</a>——阮一峰</li>
-<li><a href="https://zhuanlan.zhihu.com/p/25855075" target="_blank" rel="noopener">破解前端面试（80% 应聘者不及格系列）：从闭包说起</a>——王仕军知乎专栏：前端周刊</li>
-<li><a href="http://www.ecma-international.org/ecma-262/6.0/" target="_blank" rel="noopener">ECMAScript2015官方标准</a></li>
-</ul>
+        <h1 id="js实现截图并保存图片在本地"><a href="#js实现截图并保存图片在本地" class="headerlink" title="js实现截图并保存图片在本地"></a>js实现截图并保存图片在本地</h1><h2 id="html转canvas、canvas转image"><a href="#html转canvas、canvas转image" class="headerlink" title="html转canvas、canvas转image"></a>html转canvas、canvas转image</h2><p>需要的库<code>html2canvas.js</code>和<code>canvas2image.js</code><br>话不多说，直接上代码！  </p>
+<h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><p><strong><em>HTML：</em></strong>  </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>原始HTML<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"background:red;width: 600px;"</span> <span class="attr">class</span>=<span class="string">"test"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"background:green;"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"background:blue;"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"background:yellow;"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"background:orange;"</span>&gt;</span></span><br><span class="line">                    33333333333333333333333333333333</span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span> <span class="attr">class</span>=<span class="string">"toCanvas"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:void(0);"</span>&gt;</span> 转成canvas <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span> <span class="attr">class</span>=<span class="string">"toPic"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:void(0);"</span>&gt;</span> 转成图片 <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h5</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"imgW"</span>&gt;</span>宽度:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">value</span>=<span class="string">""</span> <span class="attr">id</span>=<span class="string">"imgW"</span> <span class="attr">placeholder</span>=<span class="string">"默认是原图宽度"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"imgH"</span>&gt;</span>高度:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">value</span>=<span class="string">""</span> <span class="attr">id</span>=<span class="string">"imgH"</span> <span class="attr">placeholder</span>=<span class="string">"默认是原图高度"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"imgFileName"</span>&gt;</span>文件名:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">placeholder</span>=<span class="string">"文件名"</span> <span class="attr">id</span>=<span class="string">"imgFileName"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"sel"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"png"</span>&gt;</span>png<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"jpeg"</span>&gt;</span>jpeg<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"bmp"</span>&gt;</span>bmp<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"save"</span>&gt;</span>保存<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">h5</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong><em>CSS：</em></strong><br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"> &lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line">    * &#123;</span><br><span class="line">        <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">        <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="selector-tag">div</span> &#123;</span><br><span class="line">        <span class="attribute">padding</span>: <span class="number">20px</span>;</span><br><span class="line">        <span class="attribute">border</span>: <span class="number">5px</span> solid black;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="selector-tag">h2</span> &#123;</span><br><span class="line">        <span class="attribute">background</span>: <span class="number">#efefef</span>;</span><br><span class="line">        <span class="attribute">margin</span>: <span class="number">10px</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="selector-class">.toPic</span> &#123;</span><br><span class="line">        <span class="attribute">display</span>: none;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></p>
+<p><strong><em>JS：</em></strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"jquery-3.3.1.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"html2canvas.min.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"canvas2image.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    <span class="keyword">var</span> test = $(<span class="string">".test"</span>).get(<span class="number">0</span>); <span class="comment">//将jQuery对象转换为dom对象</span></span><br><span class="line">    <span class="comment">// 点击转成canvas</span></span><br><span class="line">    $(<span class="string">'.toCanvas'</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 调用html2canvas插件</span></span><br><span class="line">        html2canvas(test).then(<span class="function"><span class="keyword">function</span> (<span class="params">canvas</span>) </span>&#123;</span><br><span class="line">            <span class="comment">// canvas宽度</span></span><br><span class="line">            <span class="keyword">var</span> canvasWidth = canvas.width;</span><br><span class="line">            <span class="comment">// canvas高度</span></span><br><span class="line">            <span class="keyword">var</span> canvasHeight = canvas.height;</span><br><span class="line">            <span class="comment">// 渲染canvas</span></span><br><span class="line">            $(<span class="string">'.toCanvas'</span>).after(canvas);</span><br><span class="line">            <span class="comment">// 显示‘转成图片’按钮</span></span><br><span class="line">            $(<span class="string">'.toPic'</span>).show(<span class="number">1000</span>);</span><br><span class="line">            <span class="comment">// 点击转成图片</span></span><br><span class="line">            $(<span class="string">'.toPic'</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">                <span class="comment">// 调用Canvas2Image插件</span></span><br><span class="line">                <span class="keyword">var</span> img = Canvas2Image.convertToImage(canvas, canvasWidth, canvasHeight);</span><br><span class="line">                <span class="comment">// 渲染图片</span></span><br><span class="line">                $(<span class="string">".toPic"</span>).after(img);</span><br><span class="line">                <span class="comment">// 点击保存</span></span><br><span class="line">                $(<span class="string">'#save'</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">                    <span class="keyword">let</span> type = $(<span class="string">'#sel'</span>).val(); <span class="comment">//图片类型</span></span><br><span class="line">                    <span class="keyword">let</span> w = $(<span class="string">'#imgW'</span>).val(); <span class="comment">//图片宽度</span></span><br><span class="line">                    <span class="keyword">let</span> h = $(<span class="string">'#imgH'</span>).val(); <span class="comment">//图片高度</span></span><br><span class="line">                    <span class="keyword">let</span> f = $(<span class="string">'#imgFileName'</span>).val(); <span class="comment">//图片文件名</span></span><br><span class="line">                    w = (w === <span class="string">''</span>) ? canvasWidth : w; <span class="comment">//判断输入宽高是否为空，为空时保持原来的值</span></span><br><span class="line">                    h = (h === <span class="string">''</span>) ? canvasHeight : h;</span><br><span class="line">                    <span class="comment">// 调用Canvas2Image插件</span></span><br><span class="line">                    Canvas2Image.saveAsImage(canvas, w, h, type, f);</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>代码都有详细的注释，就不一一介绍了。<br>下面来看看效果：</p>
+<h3 id="result"><a href="#result" class="headerlink" title="result"></a>result</h3><p>首先原始HTML里面的内容是需要截图的：  </p>
+<p><img src="https://i.imgur.com/XVrhUMt.png" alt="">  </p>
+<p>点击转成canvas：  </p>
+<p><img src="https://i.imgur.com/N0MU9Cq.png" alt="">  </p>
+<p>可以看见此时增加一个一个canvas标签：  </p>
+<p><img src="https://i.imgur.com/n78ucIw.png" alt="">  </p>
+<p>点击转成图片：  </p>
+<p><img src="https://i.imgur.com/oEdNa3m.png" alt="">  </p>
+<p>可以看见此时增加一个一个img标签：  </p>
+<p><img src="https://i.imgur.com/mL7VqVC.png" alt="">  </p>
+<p>点击保存：  </p>
+<p><img src="https://i.imgur.com/NWUW91n.png" alt=""></p>
+<p><img src="https://i.imgur.com/wDX8Vhe.png" alt="">  </p>
+<p>至此，js截图就做完了。  </p>
+<h3 id="html2canvas-js和canvas2image-js的下载地址："><a href="#html2canvas-js和canvas2image-js的下载地址：" class="headerlink" title="html2canvas.js和canvas2image.js的下载地址："></a><code>html2canvas.js</code>和<code>canvas2image.js</code>的下载地址：</h3><p>html2canvas.js:<a href="http://html2canvas.hertzen.com/dist/html2canvas.min.js" target="_blank" rel="noopener">http://html2canvas.hertzen.com/dist/html2canvas.min.js</a><br>canvas2image.js:<a href="https://github.com/SuperAL/canvas2image" target="_blank" rel="noopener">https://github.com/SuperAL/canvas2image</a></p>
+<h3 id="源码地址"><a href="#源码地址" class="headerlink" title="源码地址"></a>源码地址</h3><p><a href="https://github.com/usecodelee/JavaScript-screenshot" target="_blank" rel="noopener">github：https://github.com/usecodelee/JavaScript-screenshot</a></p>
 
       
     </div>
@@ -498,7 +484,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/ES6/" rel="tag"><i class="fa fa-tag"></i> ES6</a>
+            <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
           
         </div>
       
@@ -511,8 +497,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/05/twojs/" rel="next" title="匹配字符串中的子串，并让子串红色显示、格式化输出json、元素点击之后hover失效、word-wrap:break-word和word-break:break-all">
-                <i class="fa fa-chevron-left"></i> 匹配字符串中的子串，并让子串红色显示、格式化输出json、元素点击之后hover失效、word-wrap:break-word和word-break:break-all
+              <a href="/2018/07/18/eslintall/" rel="next" title="ESLint配置信息完整版">
+                <i class="fa fa-chevron-left"></i> ESLint配置信息完整版
               </a>
             
           </div>
@@ -521,8 +507,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/11/08/hanzizhuanpinyin/" rel="prev" title="汉字转拼音">
-                汉字转拼音 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/07/26/settimeout/" rel="prev" title="setTimeout定时器以及部分知识点">
+                setTimeout定时器以及部分知识点 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -655,7 +641,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ES6（一）：let和const"><span class="nav-number">1.</span> <span class="nav-text">ES6（一）：let和const</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、let"><span class="nav-number">1.1.</span> <span class="nav-text">一、let</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-let基本用法"><span class="nav-number">1.1.1.</span> <span class="nav-text">1. let基本用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-块级作用域"><span class="nav-number">1.1.2.</span> <span class="nav-text">2. 块级作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-没有变量提升"><span class="nav-number">1.1.3.</span> <span class="nav-text">3. 没有变量提升</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-暂时性死区及不能重复声明"><span class="nav-number">1.1.4.</span> <span class="nav-text">4. 暂时性死区及不能重复声明</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、const"><span class="nav-number">1.2.</span> <span class="nav-text">二、const</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-const基本用法"><span class="nav-number">1.2.1.</span> <span class="nav-text">1. const基本用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-真的不能改变吗？"><span class="nav-number">1.2.2.</span> <span class="nav-text">2. 真的不能改变吗？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">1.2.3.</span> <span class="nav-text">参考资料</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#js实现截图并保存图片在本地"><span class="nav-number">1.</span> <span class="nav-text">js实现截图并保存图片在本地</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#html转canvas、canvas转image"><span class="nav-number">1.1.</span> <span class="nav-text">html转canvas、canvas转image</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#code"><span class="nav-number">1.1.1.</span> <span class="nav-text">code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#result"><span class="nav-number">1.1.2.</span> <span class="nav-text">result</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#html2canvas-js和canvas2image-js的下载地址："><span class="nav-number">1.1.3.</span> <span class="nav-text">html2canvas.js和canvas2image.js的下载地址：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#源码地址"><span class="nav-number">1.1.4.</span> <span class="nav-text">源码地址</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
