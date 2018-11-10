@@ -7,6 +7,16 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
 
 
 
@@ -160,7 +170,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">操码哥</p>
+        <h1 class="site-subtitle" itemprop="description">操码哥</h1>
       
   </div>
 
@@ -229,6 +239,16 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-top">
+          <a href="/top/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-signal"></i> <br>
+            
+            阅读排行
+          </a>
+        </li>
+      
 
       
         <li class="menu-item menu-item-search">
@@ -287,7 +307,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">标签</h1>
+	<h2 class="post-title" itemprop="name headline">标签</h2>
 
 
 
@@ -354,7 +374,7 @@
               <img class="site-author-image" itemprop="image" src="https://p2.ssl.qhimg.com/t0183a879a1e995b084.jpg" alt="caomage">
             
               <p class="site-author-name" itemprop="name">caomage</p>
-              <p class="site-description motion-element" itemprop="description">时间是个庸医，却总说包治百病</p>
+              <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
           <nav class="site-state motion-element">
@@ -1070,6 +1090,21 @@
 
  
  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
   
  
  
