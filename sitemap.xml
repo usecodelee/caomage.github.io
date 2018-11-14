@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://caomage.com/about/index.html</loc>
+    
+    <lastmod>2018-11-14T13:52:04.212Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://caomage.com/categories/index.html</loc>
+    
+    <lastmod>2018-11-14T13:52:02.722Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://caomage.com/tags/index.html</loc>
+    
+    <lastmod>2018-11-14T13:52:00.738Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://caomage.com/%E6%B1%89%E5%AD%97%E8%BD%AC%E6%8B%BC%E9%9F%B3.html</loc>
     
     <lastmod>2018-11-10T06:50:02.093Z</lastmod>
@@ -75,27 +96,6 @@
     <loc>http://caomage.com/letandconst.html</loc>
     
     <lastmod>2018-11-08T14:39:22.943Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://caomage.com/about/index.html</loc>
-    
-    <lastmod>2018-11-08T06:49:07.556Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://caomage.com/tags/index.html</loc>
-    
-    <lastmod>2018-11-08T06:38:16.273Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://caomage.com/categories/index.html</loc>
-    
-    <lastmod>2018-11-08T06:35:30.876Z</lastmod>
     
   </url>
   
