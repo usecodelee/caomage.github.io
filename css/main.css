@@ -1,3 +1,65 @@
+#footerHeart {
+  animation: heartAnimate 1.33s ease-in-out infinite;
+}
+.with-love {
+  color: #ff7171;
+}
+@-moz-keyframes heartAnimate {
+  0%, 100% {
+    transform: scale(1);
+  }
+  10%, 30% {
+    transform: scale(0.8);
+  }
+  20%, 40%, 60%, 80% {
+    transform: scale(1);
+  }
+  50%, 70% {
+    transform: scale(1.2);
+  }
+}
+@-webkit-keyframes heartAnimate {
+  0%, 100% {
+    transform: scale(1);
+  }
+  10%, 30% {
+    transform: scale(0.8);
+  }
+  20%, 40%, 60%, 80% {
+    transform: scale(1);
+  }
+  50%, 70% {
+    transform: scale(1.2);
+  }
+}
+@-o-keyframes heartAnimate {
+  0%, 100% {
+    transform: scale(1);
+  }
+  10%, 30% {
+    transform: scale(0.8);
+  }
+  20%, 40%, 60%, 80% {
+    transform: scale(1);
+  }
+  50%, 70% {
+    transform: scale(1.2);
+  }
+}
+@keyframes heartAnimate {
+  0%, 100% {
+    transform: scale(1);
+  }
+  10%, 30% {
+    transform: scale(0.8);
+  }
+  20%, 40%, 60%, 80% {
+    transform: scale(1);
+  }
+  50%, 70% {
+    transform: scale(1.2);
+  }
+}
 /* normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif; /* 1 */
@@ -1941,7 +2003,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #1d33ff;
+  background: #9474ff;
 }
 .links-of-blogroll {
   font-size: 13px;
