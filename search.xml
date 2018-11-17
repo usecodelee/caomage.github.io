@@ -34,6 +34,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[elementuidatepicker]]></title>
+    <url>%2F1.html</url>
+    <content type="text"><![CDATA[ElementUI的DatePicker多个日期选择器默认没有选中样式的问题背景&emsp;&emsp;在使用vue+element开发的时候由于项目需要，需要使用element日期选择器里面的支持多选以及跳选的日期选择器。&emsp;&emsp;就是这货：code： 12&lt;el-date-picker v-model="value13" type="dates"&gt;&lt;/el-date-picker&gt; &emsp;&emsp;它可以支持跳选，还是一个比较实用的日期选择器： 问题&emsp;&emsp;在使用过程中发现一个很蛋疼的问题，该日期选择器并不会按照预想的点击之后将默认填充的日期选中： 解决&emsp;&emsp;历经千辛万苦无法解决，只好去官方GitHub提issue，很快得到回复。原来因为dates的取值是每一天的0点整,传入的默认值是当前时间,与0点不同 所以没有应用选中样式，如果要默认选择当天,默认值请设置为 new Date(new Date().setHours(0,0,0,0))。code： 12345data() &#123; return &#123; value13: [new Date(new Date().setHours(0,0,0,0))] &#125;; &#125; &emsp;&emsp;这样就行了！ jsfiddle在线测试地址]]></content>
+      <categories>
+        <category>vue</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[匹配字符串中的子串，并让子串红色显示、格式化输出json、元素点击之后hover失效、word-wrap:break-word和word-break:break-all]]></title>
     <url>%2Ftwojs.html</url>
     <content type="text"><![CDATA[匹配字符串中的子串，并让子串红色显示、格式化输出json、元素点击之后hover失效、word-wrap:break-word和word-break:break-all五、匹配特定的字符串，让其突出显示12345var subStr = "abc";var reg = new RegExp("(" + subStr + ")", "g");var str = "dsafadfdsfabsabcfefaefeabcfdsfafefaefaes";var newstr = str.replace(reg, "&lt;font color=red&gt;$1&lt;/font&gt;");document.write(newstr); 六、格式化输出json12JSON.stringify(object,null,2)JSON.stringify(object,undefined,2) 其中第三个参数表示指定缩进用的空白字符串 七、jQuery中，某个元素被点击之后hover失效使用jQuery的click为某元素加上css样式，之后该元素原有的hover事件失效，原因是click加上的css权值比外联的css权值大。所以是点击之后原有css被覆盖了。解决方法也很简单，为原有的css hover样式加上!important。 八、word-wrap:break-word和word-break:break-allword-wrap:break-word表示超出部分按单词截断，会保持单词的完整。word-break:break-all则会从单词中间截断。word-wrap无效的情况： 对行内元素无效 设置了white-space:nowrap时无效，需将white-space设置为normal 对table下的td设置无效]]></content>
