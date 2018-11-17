@@ -67,6 +67,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[js操作Excel表格]]></title>
+    <url>%2Fjsexcel.html</url>
+    <content type="text"><![CDATA[js-ExcelJs is used to operate Excel tables and realize automatic summation. 使用js对在网页中打开Excel表格，并进行自动求和操作。 使用的插件：js-xlsx代码地址：https://github.com/usecodelee/js-Excel兼容性如图： 操作演示： 初始页面： 打开Excel表格（可以点击选择文件，也可以直接将文件拖动到输入框） 可以看见行数列数等信息 输入需要求和的列名，得出求和结果 如果表格中含有非数字 如果有非数字会提示 然后也能计算出来去除非数字后的正确结果 原始的Excel表格]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[JavaScript实现斐波那契数列]]></title>
     <url>%2Ffibonacci.html</url>
     <content type="text"><![CDATA[背景——兔子数列假设第1个月有1对刚诞生的兔子，第2个月进入成熟期，第3个月开始生育兔子，而1对成熟的兔子每个月会生1对兔子，兔子永远不会死去……那么，由1对兔子开始，12个月后会有多少对兔子呢？ 问题分析：我们拿新出生的1对小兔子分析， 第1个月，小兔子a没有繁殖能力，所以还是1对。 第2个月，小兔子a进入成熟期，仍然是1对。 第3个月，兔子a生了1对小兔子b，于是这个月共有2（1+1）对兔子。 第4个月，兔子a又生了1对小兔子c，因此共有3（1+2）对兔子。 第5个月，兔子a又生了1对兔子d，而在第3个月出生的兔子b也生下了1对小兔子e，于是共有5（2+3）对兔子 …… 从分析中可以看出，这个数列有一个很明显的特点，即从第3个月开始，当月的兔子数＝上月兔子数+当月新生兔子数，而当月新生的兔子数正好是上上个月的兔子数。因此：当月的兔子数=上月兔子数+上上月兔子数。这就是著名的斐波那契数列，又称为黄金分割数列。 斐波那契数列：1, 1, 2, 3, 5, 8, 13, 21, 35 … 表达式为： 算法设计 递归——简单粗暴 代码： 12345678910/* 递归 */function fb1(n) &#123; if (n &lt; 1) return -1; if (n == 1 || n == 2) return 1; return fb1(n - 1) + fb1(n - 2);&#125;console.log(fb1(12));//144 时间复杂度：O(2^N)空间复杂度：O(N)时间复杂度是指数阶，属于爆炸增量函数，在程序设计中我们应该避免这样的复杂度。 改进——空间换时间 第一种解法比较简单，但是多个元素重复计算，因而时间复杂度较高，为了避免重复计算，可进行数组保存一下每一次计算的结果，减少时间复杂度。 代码： 12345678910111213 /* 数组 */function fb2(n) &#123; if (n &lt; 1) return -1; if (n == 1 || n == 2) return 1; var res = [1, 1]; for (var i = 2; i &lt; n; i++) &#123; res[i] = res[i - 1] + res[i - 2]; &#125; return res[n - 1];&#125;console.log(fb2(12));//144 时间复杂度：O(2^N)空间复杂度：O(N) 改进——降空间复杂度 观察第二种解法，其实我们只需要得到第n个斐波那契数，中间结果只是为了下一次计算使用，根部不需要记录。因此可以再次优化。 代码： 1234567891011121314151617/* 迭代 */function fb3(n) &#123; let num1 = 1, num2 = 2, num3 = 0; if (n &lt; 1) return -1; if (n == 1 || n == 2) return 1; for (let i = 3; i &lt; n; i++) &#123; num3 = num1 + num2; num1 = num2; num2 = num3 &#125; return num3&#125;console.log(fb3(12));//144 时间复杂度：O(N) 空间复杂度：O(1) 生活中的斐波那契数列科学研究发现植物的叶、枝、茎的排列很多符合斐波那契数列！向日葵的种子圈数和种子数，菠萝外表排序等。植物的枝丫也满足斐波那契数列，这就是生物学中的“鲁德维个定律”。 植物并不懂得斐波那契数列，这是自然选择的结果，这些植物的排列方式可以使得植物种子大小相近而且疏密得当。这就需要我们自然界最美好的数，黄金分割数：0.618！ 再看我们的斐波那契数列，它是一个自然数的数列，然而通项公式却是用无理数来表达的。而且当n趋向于无穷大时，斐波那契数列前一项和后一项的比值越来越接近黄金分割比0.618！ 参考书籍：《趣学算法》——陈小玉著]]></content>
@@ -163,6 +174,39 @@
       </categories>
       <tags>
         <tag>想法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[常见的html、css以及javascript兼容方案]]></title>
+    <url>%2Fjrx.html</url>
+    <content type="text"><![CDATA[Html&amp;CSS部分：audio&amp;video 一般的做法： 1&lt;video controls="controls" autoplay="autoplay" width="512" height="288" src="myvideo.mp4"&gt;&lt;/video&gt; 更好的做法： 1234567891011&lt;video width="512" height="288"&gt; &lt;source src="myvideo.mp4" type="video/mp4"&gt;&lt;/source&gt; &lt;source src="myvideo.ogv" type="video/ogg"&gt;&lt;/source&gt; &lt;source src="myvideo.webm" type="video/webm"&gt;&lt;/source&gt; &lt;object width="512" height="288" type="application/x-shockwave-flash" data="myvideo.swf"&gt; &lt;param name="movie" value="myvideo.swf" /&gt; &lt;param name="flashvars" value="autostart=true&amp;file=myvideo.swf" /&gt; &lt;/object&gt; 当前浏览器不支持 video直接播放，点击这里下载视频： &lt;a href="myvideo.webm"&gt;下载视频&lt;/a&gt;&lt;/video&gt; display:inline-block;在ie6、ie7下只有设置在默认显示方式为inline的元素上才会生效，请实现兼容ie6、ie7的通用的方式。 解决方案： 123display: inline-block;*display: inline;*zoom: 1; 通过 zoom: 1; 去触发hasLayout的行为，然后通过 display: inline; 去支持IE7及以下版本（高版本会直接使用display: inline-block;） 当hasLayout和inline在一起的时候，就触发了inline-block的行为在IE7及以下版本。 ul和ol列表缩进消除ul、ol等列表的缩进时，样式应写成：list-style:none;margin:0px;padding:0px;其中margin属性对IE有效，padding属性对FireFox有效。在IE中，设置margin:0px可以去除列表的上下左右缩进、空白以及列表编号或圆点，设置padding对样式没有影响；在 Firefox 中，设置margin:0px仅仅可以去除上下的空白，设置padding:0px后仅仅可以去掉左右缩进，还必须设置list- style:none才能去除列表编号或圆点。也就是说，在IE中仅仅设置margin:0px即可达到最终效果，而在Firefox中必须同时设置margin:0px、padding:0px以及list-style:none三项才能达到最终效果。 border-radius语法： border-radius：[&lt;length&gt;|&lt;percentage&gt; ]{1,4}[/[&lt;length&gt;|&lt;percentage&gt;]{1,4}]? length：用长度值设置对象的圆角半径长度。不允许负值percentage：用百分比设置对象的圆角半径长度。不允许负值border-radius:20px; 兼容方法： 低版本的chrome:-webkit-border-radius:10px; 低版本的firefox:-moz-border-radius:10px; ie7以下版本不支持圆角 IE6/7/8:引入ie-css3兼容文件,不支持除了黑色(#000)以外的其他颜色 IE的双边距bug设置为float的div在ie下设置的margin会加倍。这是一个ie6都存在的bug。 解决方案 在这个div里面加上display:inline; 例如： 1&lt;div id=”div1”&gt;&lt;/div&gt; 123456789.div2 &#123; background-color: red; float: left; width: 150px; height: 150px; margin: 5px 0 5px 100px; display:inline;&#125; box-shadow语法： box-shadow：none|[inset?&amp;&amp;[&lt;offset-x&gt;&lt;offset-y&gt;&lt;blur-radius&gt;?&lt;spread-radius&gt;?&lt;color&gt;?]]# inset：设置对象的阴影类型为内阴影。该值为空时，则对象的阴影类型为外阴影offset-x: 这是第一个length值设置水平偏移量，如果是负值则阴影位于元素左边。offset-y: 这是第二个length值设置垂直偏移量，如果是负值则阴影位于元素上面。blur-radius:这是第三个length值。值越大，糊糊面积越大，阴影就越大越淡。 不能为负值。默认为0，此时阴影边缘锐利。color：设置对象的阴影的颜色。 实例：12345678.div2 &#123; background-color: red; float: left; width: 150px; height: 150px; margin: 5px 0 5px 100px; box-shadow: 20px 20px 10px #ccc;&#125; IE7、8：解决方案： 第一种方法： filter:progid:dXImageTransform.Microsoft.DropShadow(color=#cccccc,offX=20,offY=20,positives=true); 第二种方法： filter:progid:DXImageTransform.Microsoft.Shadow(color=&#39;#cccccc&#39;,Direction=&#39;120&#39;,Strength=&#39;20&#39;); 两种方法都存在的缺点：阴影不能边缘模糊 transform兼容方法： .transform{ -webkit-transform: x,y; -moz-transform: x,y; -ms-transform: x,y; -o-transform: x,y; transform: x,y; } 垂直翻转： transform:rotateY(180deg) IE8及以下：用IE滤镜 filter:fliph;//水平翻转 filter:flipv;//垂直翻转 JavaScript部分：JSON.stringify函数在ie6/7中不支持，如何兼容？12345678910111213141516171819202122232425262728293031323334353637if(!window.JSON) &#123; window.JSON = &#123; parse: function(sJson) &#123; return eval("(" + sJSON + ")"); &#125;, stringify: function(obj) &#123; var result = ""; for(var key in obj) &#123; if(typeof obj[key] == "string") &#123; result += "\"" + key + "\":\"" + obj[key] + "\","; &#125; else if(obj[key] instanceof RegExp) &#123; result += "\"" + key + "\":&#123;&#125;,"; &#125; else if(typeof obj[key] == "undefined" || obj[key] instanceof Function) &#123;&#125; else if(obj[key] instanceof Array) &#123; result += "\"" + key + "\":["; var arr = obj[key]; for(var item in arr) &#123; if(typeof arr[item] == "string") &#123; result += "\"" + arr[item] + "\","; &#125; else if(arr[item] instanceof RegExp) &#123; result += "&#123;&#125;,"; &#125; else if(typeof arr[item] == "undefined" || arr[item] instanceof Function) &#123; result += null + ","; &#125; else if(arr[item] instanceof Object) &#123; result += this.stringify(arr[item]) + ","; &#125; else &#123; result += arr[item] + ","; &#125; &#125; result = result.slice(0, -1) + "]," &#125; else if(obj[key] instanceof Object) &#123;&#125; else &#123; result += "\"" + key + "\":" + obj[key] + ","; &#125; &#125; return "&#123;" + result.slice(0, -1) + "&#125;"; &#125; &#125;;&#125; element.children能够获取元素的元素子节点，但是低版本的ie不支持，如何在低版本的ie上兼容类似的功能。1234567891011121314151617181920212223242526272829303132333435function getElementChildren(element)&#123; if(!element.children)&#123; var element_arr = []; var list = element.ChildNodes; for(i=0; i&lt;list.length; i++)&#123; if (list[i].nodetype==1) &#123; element_arr.push(list[i]); &#125; &#125; return element_arr; &#125; else&#123; return element.children; &#125;&#125; ``` ### element.dataset能够获取元素的自定义属性，但是低版本的ie不支持，如何在低版本的ie上兼容类似的功能。```javascriptfunction dataset(element) &#123; var obj = &#123;&#125;; if(element.dataset) &#123; return element.dataset; &#125; else &#123; // console.log(element.attributes); for(var i = 0; i &lt; element.attributes.length; i++) &#123; var key = element.attributes[i].nodeName; if(/^data-\w+$/.test(key)) &#123; //判断是否以data-开头的属性名 var value = element.attributes[i].nodeValue; //值 var keyName = key.match(/^data-(\w+)/)[1]; //键名 obj[keyName] = value; //对象添加属性 &#125; &#125; &#125; return obj;&#125; window.getComputedStyle能够获取元素的实际样式，但是低版本的ie8及以下不支持，如何在低版本的ie上兼容类似的功能。1234567891011//获取当前样式function getStyle(element, att) &#123; //特性侦测 if(window.getComputedStyle) &#123; //优先使用W3C规范 return window.getComputedStyle(element)[att]; &#125; else &#123; //针对IE9以下兼容 return element.currentStyle[att]; &#125;&#125; 文中所有的demo下载地址：https://github.com/usecodelee/compatibility]]></content>
+      <categories>
+        <category>兼容</category>
+      </categories>
+      <tags>
+        <tag>兼容</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Sprite 从PS切图到具体实现完整过程]]></title>
+    <url>%2Fsprite.html</url>
+    <content type="text"><![CDATA[sprite的优点有以下方面： 减少http请求次数。 减少图片字节数（很多人有疑问为什么合在一起还会降低字节数，图片明明变大了。原因是这样的：每个图片都是有固定的格式的，包括图像头、版本号、appo块等等，这些属性都会占一定的字节数。因此合在一起回降低字节数）。 缺点： 维护成本增加，比如要修改或增加一个图标需要修改整张sprite图。 解决这一缺点的方法是： 增加图标摆放的间隙。根据图片大小一般留20-40px的间隙。 图片合并的基本原则： 色彩相近的合在一起 大小相近的合在一起 属于同一页面的合在一起 有点击或hover状态改变的图标放在一起 具体实现：PS切图：首先合并图层，然后使用举行选框工具选出需要切出的图标，接着使用魔棒工具+Alt去除多余的部分。最后保存到新建的图层。我这里使用的是Adobe公司的部分软件logo得到的结果如下： CSS布局： HTML:使用ul_li标签布局 CSS：加上一些CSS属性之后 使用before选择器，为每个li标签加上background-position属性之后： 详细解读：以PS为例。123.ps:before&#123; background-position:-45px-21px; &#125; 其中background-position的第一个值表示PS图标左边距离整张sprite图左边的距离，第二个值表示PS图标上边距离整张sprite图上边的距离。直接上图： 但是我们看见实际运用的时候的值是负数，这就相当于把整张sprite往左边移动45px，往上移动21px。这些值可以用PS直接测量出来。 最后附上demo源码下载地址：https://github.com/usecodelee/sprite]]></content>
+      <categories>
+        <category>css</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Present轻量级加密算法C#实现]]></title>
+    <url>%2Fpresent.html</url>
+    <content type="text"><![CDATA[Present轻量级加密算法 是不是看得一头雾水，那就对了，当初我们拿到的时候也是这样子。（这时候我就想起来我们老师说的：“那你就看下我写的密码学科普书《密码学趣味之旅》吧”，当当网：http://product.dangdang.com/23756886.html 当然你也可以直接联系我我寄一本给你，毕竟我们班就有四十本）。 还有这篇介绍present的文章我这儿也有英文原版，地址：https://github.com/usecodelee/present/blob/master/present_spec.pdf 当然，我们最后也是做出一些东西的： 论文里面的测试案例： 运行结果： 这是用C# GUI编程写出来的，毕竟老师说了不想只看那个小黑框。 最后再来重点啦！源码地址：https://github.com/usecodelee/present]]></content>
+      <categories>
+        <category>密码学</category>
+      </categories>
+      <tags>
+        <tag>密码学</tag>
       </tags>
   </entry>
 </search>
