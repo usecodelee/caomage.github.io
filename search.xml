@@ -23,6 +23,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[判断两个json是否相等]]></title>
+    <url>%2F2.html</url>
+    <content type="text"><![CDATA[JavaScript判断两个json是不是相同的原理 暴力的递归遍历对比，遇到不相等就return false code： 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556let jsonObjA = &#123; "Name": "MyName", "Company": "MyCompany", "Infos": [&#123; "Age": "100" &#125;, &#123; "Box": [&#123; "Height": "100" &#125;, &#123; "Weight": "200" &#125;] &#125;], "Address": "undefined"&#125;;let jsonObjB = &#123; "Name": "MyName", "Company": "MyCompany", "Infos": [&#123; "Age": "100" &#125;, &#123; "Box": [&#123; "Height": "100" &#125;, &#123; "Weight": "200" &#125;] &#125;], "Address": "undefined"&#125;;function compreObj(obj1, obj2) &#123; var flag = true; function compre(obj1, obj2) &#123; if (Object.keys(obj1).length != Object.keys(obj2).length) &#123; flag = false; &#125; else &#123; for (let x in obj1) &#123; if (obj2.hasOwnProperty(x)) &#123; if (obj1[x] !== obj2[x]) &#123; compre(obj1[x], obj2[x]); &#125; &#125; else &#123; flag = false; &#125; &#125; &#125; if (flag === false) &#123; return false; &#125; else &#123; return true; &#125; &#125; return compre(obj1, obj2)&#125;console.log(compreObj(jsonObjA, jsonObjB));]]></content>
+      <categories>
+        <category>JSON</category>
+      </categories>
+      <tags>
+        <tag>JSON JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[ES6（一）：let和const]]></title>
     <url>%2Fletandconst.html</url>
     <content type="text"><![CDATA[ES6（一）：let和const一、let1. let基本用法&emsp;&emsp;相当于var,但是又与var不同，因为let声明的变量只能在let所在的代码块中有效。&emsp;&emsp;从以下两段代码以及对应的输出结果可以很明显的看出var与let的区别。code： 1234for (var i = 0; i &lt; 5; i++) &#123; console.log(i);&#125;console.log(i); result： 123456012345 code： 1234for (let i = 0; i &lt; 5; i++) &#123; console.log(i);&#125;console.log(i); result： 12345601234ReferenceError: i is not defined 2. 块级作用域&emsp;&emsp;众所周知，在ES5中只有全局作用域和函数作用域，没有我们所谓的块级作用域。&emsp;&emsp;这不禁让我想起一个面试题：code： 1234567for (var i = 0; i &lt; 5; i++) &#123; setTimeout(function() &#123; console.log(new Date, i); &#125;, 1000);&#125;console.log(new Date, i); &emsp;&emsp;问：上面这段代码输出的结果是什么？&emsp;&emsp;仔细琢磨一下我们很容易得出正确的答案： result： 1234562018-10-31T06:55:30.020Z 52018-10-31T06:55:31.021Z 52018-10-31T06:55:31.021Z 52018-10-31T06:55:31.022Z 52018-10-31T06:55:31.022Z 52018-10-31T06:55:31.022Z 5 &emsp;&emsp;仔细看一下发现：由于setTimeout会被JavaScript延迟执行，因此是先输出最底部的console.log，隔一秒之后再执行循环里面的consol.log,此时i已经全部是5。&emsp;&emsp;那我们怎么样才能使输出结果变成想要的0,1,2,3,4呢？&emsp;&emsp;明白了let的原理之后其实问题变得很简单：code： 1234567for (let i = 0; i &lt; 5; i++) &#123; setTimeout(function() &#123; console.log(new Date, i); &#125;, 1000);&#125;console.log(new Date, i); &emsp;&emsp;这样就行了吗？result： 1ReferenceError: i is not defined &emsp;&emsp;哈哈，刚刚还说过let只在所在的代码块里面有效，这里最外层的console.log很明显找不到i，所以报出引用错误。想要得到正确答案其实还需要去掉最后一行console.log。&emsp;&emsp;当然这个题目要搁以前的话，首先想到的解决方案应该是IIFE（Immediately Invoked Function Expression：声明即执行的函数表达式）来解决闭包造成的问题。code： 123456789for (var i = 0; i &lt; 5; i++) &#123; (function(j) &#123; setTimeout(function() &#123; console.log(new Date, j); &#125;, 1000); &#125;)(i);&#125;console.log(new Date, i); result： 1234562018-10-31T07:17:45.825Z 52018-10-31T07:17:46.827Z 02018-10-31T07:17:46.827Z 12018-10-31T07:17:46.827Z 22018-10-31T07:17:46.827Z 32018-10-31T07:17:46.827Z 4 &emsp;&emsp;由此我们是不是就可以得出一个结论，有了let，我们就可以抛弃IIFE了？&emsp;&emsp;这个暂时还不好说，我们还是继续看看let的其他特性。 3. 没有变量提升&emsp;&emsp;var命令会产生变量提升的现象，这使得js这门语言变得并不严谨，这一点是特点也是鸡肋。用var声明的变量，如果我们在声明之前使用，则它的值为undefined。&emsp;&emsp;而当我们用let定义变量时，就必须严格按照先定义再使用的原则了，反之则会抛出一个大大的引用错误（ReferenceError），显然这更符合人们的使用习惯。code： 12345console.log(a);var a = 2;console.log(b);let b = 2; result： 12undefinedReferenceError: b is not defined 4. 暂时性死区及不能重复声明&emsp;&emsp;ES6 明确规定，如果区块中存在let和const命令，这个区块对这些命令声明的变量，从一开始就形成了封闭作用域。凡是在声明之前就使用这些变量，就会报错。&emsp;&emsp;总之，在代码块内，使用let命令声明变量之前，该变量都是不可用的。这在语法上，称为“暂时性死区”（temporal dead zone，简称 TDZ）。&emsp;&emsp;“暂时性死区”也意味着typeof不再是一个百分之百安全的操作。&emsp;&emsp;let不允许在相同作用域内，重复声明同一个变量。 二、const1. const基本用法&emsp;&emsp;const命令是声明一个常量，用法和let一样。 和let的相同之处是： const与let作用域相同，都是只在声明的代码块中起作用 const也不会提升所声明的常量 const也不能重复声明 不同之处是const声明的常量在声明时就必须赋值，因为一旦声明就不能改变改常量的值 2. 真的不能改变吗？&emsp;&emsp;const实际上保证的，并不是变量的值不得改动，而是变量指向的那个内存地址所保存的数据不得改动。对于简单类型的数据（数值、字符串、布尔值），值就保存在变量指向的那个内存地址，因此等同于常量。但对于复合类型的数据（主要是对象和数组），变量指向的内存地址，保存的只是一个指向实际数据的指针，const只能保证这个指针是固定的（即总是指向另一个固定的地址），至于它指向的数据结构是不是可变的，就完全不能控制了。因此，将一个对象声明为常量必须非常小心。code&amp;result： 12345678const a=1;a=2;//TypeErrorconst obj=&#123; b:3, c:4&#125;obj.b=5;console.log(obj);//&#123;b:5,c:4&#125; 参考资料 《ECMAScript 6 入门》——阮一峰 破解前端面试（80% 应聘者不及格系列）：从闭包说起——王仕军知乎专栏：前端周刊 ECMAScript2015官方标准]]></content>
@@ -34,7 +45,7 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[elementuidatepicker]]></title>
+    <title><![CDATA[ElementUI的DatePicker多个日期选择器默认没有选中样式的问题]]></title>
     <url>%2F1.html</url>
     <content type="text"><![CDATA[ElementUI的DatePicker多个日期选择器默认没有选中样式的问题背景&emsp;&emsp;在使用vue+element开发的时候由于项目需要，需要使用element日期选择器里面的支持多选以及跳选的日期选择器。&emsp;&emsp;就是这货：code： 12&lt;el-date-picker v-model="value13" type="dates"&gt;&lt;/el-date-picker&gt; &emsp;&emsp;它可以支持跳选，还是一个比较实用的日期选择器： 问题&emsp;&emsp;在使用过程中发现一个很蛋疼的问题，该日期选择器并不会按照预想的点击之后将默认填充的日期选中： 解决&emsp;&emsp;历经千辛万苦无法解决，只好去官方GitHub提issue，很快得到回复。原来因为dates的取值是每一天的0点整,传入的默认值是当前时间,与0点不同 所以没有应用选中样式，如果要默认选择当天,默认值请设置为 new Date(new Date().setHours(0,0,0,0))。code： 12345data() &#123; return &#123; value13: [new Date(new Date().setHours(0,0,0,0))] &#125;; &#125; &emsp;&emsp;这样就行了！ jsfiddle在线测试地址]]></content>
       <categories>
@@ -42,6 +53,28 @@
       </categories>
       <tags>
         <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[手机H5页面]]></title>
+    <url>%2F3.html</url>
+    <content type="text"><![CDATA[手机H5页面文字滚动使用li标签，通过改变margin-top实现向上滚动。 代码： js: 123456789101112131415161718192021222324252627carousel: function() &#123; var items = $('.roll').find('li'); console.log(items); var $itemOne = items.eq(0); var margin_top = 0; var margin_top_height = $itemOne.height(); var lastitems = margin_top_height * items.length; var stay_time = 2000; //停留时间 var current_time = 0; if (items.length &gt; 0) &#123; setInterval(function() &#123; if (margin_top % margin_top_height == 0) &#123; //停留 current_time += 50; if (current_time &lt;= stay_time) &#123; return; &#125; current_time = 0; &#125; margin_top += 1; if (margin_top == lastitems) &#123; margin_top = 0; &#125; $itemOne.css('margin-top', '-' + margin_top + 'px'); &#125;, 50); &#125;&#125;, html: 1234567891011121314151617181920&lt;ul class="roll_width"&gt; &lt;li&gt; &lt;span class="&gt;&lt;img class="" src="images/img.png" alt=""&gt;&lt;/span&gt; &lt;span class=""&gt;张三&lt;/span&gt; &lt;span class=""&gt;男&lt;/span&gt; &lt;span class=""&gt;25&lt;/span&gt; &lt;/li&gt; &lt;li&gt; &lt;span class=""&gt;&lt;img class="" src="images/img.png" alt=""&gt;&lt;/span&gt; &lt;span class="setwidth"&gt;李四&lt;/span&gt; &lt;span class="setwidth3"&gt;男&lt;/span&gt; &lt;span class="setwidth2"&gt;25&lt;/span&gt; &lt;/li&gt; &lt;li&gt; &lt;span class=""&gt;&lt;img class="" src="images/img.png" alt=""&gt;&lt;/span&gt; &lt;span class=""&gt;王五&lt;/span&gt; &lt;span class=""&gt;男&lt;/span&gt; &lt;span class=""&gt;35&lt;/span&gt; &lt;/li&gt;&lt;/ul&gt; 手机页面适配各种屏幕使用手淘团队的flexible： jQuery ajax包含cookie123456789101112131415161718$.ajax(&#123; url: url, data: ret, type: "GET", async: true, xhrFields: &#123; withCredentials: true &#125;, crossDomain: true, dataType: 'json', timeout: 2000, success: function(ret) &#123; &#125;, error: function(xhr, type) &#123; &#125; &#125;);]]></content>
+      <categories>
+        <category>H5</category>
+      </categories>
+      <tags>
+        <tag>H5</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[JavaScript实现斐波那契数列]]></title>
+    <url>%2Ffibonacci.html</url>
+    <content type="text"><![CDATA[实现斐波那契数列（js），以及复杂度降阶背景——兔子数列假设第1个月有1对刚诞生的兔子，第2个月进入成熟期，第3个月开始生育兔子，而1对成熟的兔子每个月会生1对兔子，兔子永远不会死去……那么，由1对兔子开始，12个月后会有多少对兔子呢？ 问题分析：我们拿新出生的1对小兔子分析， 第1个月，小兔子a没有繁殖能力，所以还是1对。 第2个月，小兔子a进入成熟期，仍然是1对。 第3个月，兔子a生了1对小兔子b，于是这个月共有2（1+1）对兔子。 第4个月，兔子a又生了1对小兔子c，因此共有3（1+2）对兔子。 第5个月，兔子a又生了1对兔子d，而在第3个月出生的兔子b也生下了1对小兔子e，于是共有5（2+3）对兔子 …… 从分析中可以看出，这个数列有一个很明显的特点，即从第3个月开始，当月的兔子数＝上月兔子数+当月新生兔子数，而当月新生的兔子数正好是上上个月的兔子数。因此：当月的兔子数=上月兔子数+上上月兔子数。这就是著名的斐波那契数列，又称为黄金分割数列。 斐波那契数列：1, 1, 2, 3, 5, 8, 13, 21, 35 … 表达式为： 算法设计 递归——简单粗暴 代码： 12345678910/* 递归 */function fb1(n) &#123; if (n &lt; 1) return -1; if (n == 1 || n == 2) return 1; return fb1(n - 1) + fb1(n - 2);&#125;console.log(fb1(12));//144 时间复杂度：O(2^N) 空间复杂度：O(N)时间复杂度是指数阶，属于爆炸增量函数，在程序设计中我们应该避免这样的复杂度。 改进——空间换时间 第一种解法比较简单，但是多个元素重复计算，因而时间复杂度较高，为了避免重复计算，可进行数组保存一下每一次计算的结果，减少时间复杂度。 代码： 12345678910111213 /* 数组 */function fb2(n) &#123; if (n &lt; 1) return -1; if (n == 1 || n == 2) return 1; var res = [1, 1]; for (var i = 2; i &lt; n; i++) &#123; res[i] = res[i - 1] + res[i - 2]; &#125; return res[n - 1];&#125;console.log(fb2(12));//144 时间复杂度：O(2^N)空间复杂度：O(N) 改进——降空间复杂度 观察第二种解法，其实我们只需要得到第n个斐波那契数，中间结果只是为了下一次计算使用，根部不需要记录。因此可以再次优化。 代码： 1234567891011121314151617/* 迭代 */function fb3(n) &#123; let num1 = 1, num2 = 2, num3 = 0; if (n &lt; 1) return -1; if (n == 1 || n == 2) return 1; for (let i = 3; i &lt; n; i++) &#123; num3 = num1 + num2; num1 = num2; num2 = num3 &#125; return num3&#125;console.log(fb3(12));//144 时间复杂度：O(N) 空间复杂度：O(1) 生活中的斐波那契数列科学研究发现植物的叶、枝、茎的排列很多符合斐波那契数列！向日葵的种子圈数和种子数，菠萝外表排序等。植物的枝丫也满足斐波那契数列，这就是生物学中的“鲁德维个定律”。 植物并不懂得斐波那契数列，这是自然选择的结果，这些植物的排列方式可以使得植物种子大小相近而且疏密得当。这就需要我们自然界最美好的数，黄金分割数：0.618！ 再看我们的斐波那契数列，它是一个自然数的数列，然而通项公式却是用无理数来表达的。而且当n趋向于无穷大时，斐波那契数列前一项和后一项的比值越来越接近黄金分割比0.618！ 参考书籍：《趣学算法》——陈小玉著]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
@@ -119,6 +152,17 @@
       </categories>
       <tags>
         <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[我的爱情观]]></title>
+    <url>%2Fviewoflove.html</url>
+    <content type="text"><![CDATA[有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！有个屁的爱情观！]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>想法</tag>
       </tags>
   </entry>
 </search>
