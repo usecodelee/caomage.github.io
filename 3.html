@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="CAOMAGE">
 <meta property="og:description" content="手机H5页面（文字滚动、适配各种屏幕、jQuery ajax包含cookie）">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-17T02:57:49.268Z">
+<meta property="og:updated_time" content="2018-11-17T04:57:46.133Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="手机H5页面">
 <meta name="twitter:description" content="手机H5页面（文字滚动、适配各种屏幕、jQuery ajax包含cookie）">
@@ -410,7 +410,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  322
+                  318
                 </span>
               
 
@@ -451,7 +451,7 @@
       
 
       
-        <h1 id="手机H5页面"><a href="#手机H5页面" class="headerlink" title="手机H5页面"></a>手机H5页面</h1><h3 id="文字滚动"><a href="#文字滚动" class="headerlink" title="文字滚动"></a>文字滚动</h3><p>使用li标签，通过改变margin-top实现向上滚动。</p>
+        <h3 id="文字滚动"><a href="#文字滚动" class="headerlink" title="文字滚动"></a>文字滚动</h3><p>使用li标签，通过改变margin-top实现向上滚动。</p>
 <p>代码：</p>
 <p>js:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">carousel: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> items = $(<span class="string">'.roll'</span>).find(<span class="string">'li'</span>);</span><br><span class="line">	<span class="built_in">console</span>.log(items);</span><br><span class="line">	<span class="keyword">var</span> $itemOne = items.eq(<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">var</span> margin_top = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">var</span> margin_top_height = $itemOne.height();</span><br><span class="line">	<span class="keyword">var</span> lastitems = margin_top_height * items.length;</span><br><span class="line">	<span class="keyword">var</span> stay_time = <span class="number">2000</span>; <span class="comment">//停留时间</span></span><br><span class="line">	<span class="keyword">var</span> current_time = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span> (items.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">		setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">			<span class="keyword">if</span> (margin_top % margin_top_height == <span class="number">0</span>) &#123;</span><br><span class="line">				<span class="comment">//停留</span></span><br><span class="line">				current_time += <span class="number">50</span>;</span><br><span class="line">				<span class="keyword">if</span> (current_time &lt;= stay_time) &#123;</span><br><span class="line">					<span class="keyword">return</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				current_time = <span class="number">0</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			margin_top += <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">if</span> (margin_top == lastitems) &#123;</span><br><span class="line">				margin_top = <span class="number">0</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			$itemOne.css(<span class="string">'margin-top'</span>, <span class="string">'-'</span> + margin_top + <span class="string">'px'</span>);</span><br><span class="line">		&#125;, <span class="number">50</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
@@ -718,7 +718,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#手机H5页面"><span class="nav-number">1.</span> <span class="nav-text">手机H5页面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#文字滚动"><span class="nav-number">1.0.1.</span> <span class="nav-text">文字滚动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#手机页面适配各种屏幕"><span class="nav-number">1.0.2.</span> <span class="nav-text">手机页面适配各种屏幕</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery-ajax包含cookie"><span class="nav-number">1.0.3.</span> <span class="nav-text">jQuery ajax包含cookie</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#文字滚动"><span class="nav-number">1.</span> <span class="nav-text">文字滚动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#手机页面适配各种屏幕"><span class="nav-number">2.</span> <span class="nav-text">手机页面适配各种屏幕</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery-ajax包含cookie"><span class="nav-number">3.</span> <span class="nav-text">jQuery ajax包含cookie</span></a></li></ol></div>
             
 
           </div>
@@ -765,7 +765,7 @@
     
 <br>
 
-  <span class="post-count">&nbsp;博客全站共14k字</span>
+  <span class="post-count">&nbsp;博客全站共13.7k字</span>
 </div>
  
 
