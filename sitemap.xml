@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://caomage.com/photos/data.json</loc>
+    
+    <lastmod>2018-11-17T16:37:16.862Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://caomage.com/photos/index.html</loc>
+    
+    <lastmod>2018-11-17T15:33:46.404Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://caomage.com/present.html</loc>
     
     <lastmod>2018-11-17T06:21:59.985Z</lastmod>
