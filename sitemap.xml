@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://caomage.com/promise.html</loc>
+    
+    <lastmod>2018-11-21T12:01:53.302Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://caomage.com/photos/data.json</loc>
     
     <lastmod>2018-11-18T13:33:14.158Z</lastmod>
