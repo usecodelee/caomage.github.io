@@ -2039,7 +2039,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffa6bb;
+  background: #537709;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3170,4 +3170,10 @@ hr {
 }
 .post-gallery img {
   border-radius: 50%;
+}
+#days {
+  display: block;
+  color: #07b39b;
+  font-size: 13px;
+  margin-top: 15px;
 }

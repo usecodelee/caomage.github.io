@@ -113,7 +113,7 @@
 
 
 
-  <meta name="keywords" content="JavaScript, 前端, html, css, vue">
+  <meta name="keywords" content="top,文章阅读量排行榜">
 
 
 
@@ -124,16 +124,18 @@
 
 
 
-<meta name="description" content="时间是个庸医，却总说包治百病">
+<meta name="description" content="博客文章阅读量排行榜">
+<meta name="keywords" content="top,文章阅读量排行榜">
 <meta property="og:type" content="website">
-<meta property="og:title" content="CAOMAGE">
-<meta property="og:url" content="http://caomage.com/categories/兼容/index.html">
+<meta property="og:title" content="阅读排行">
+<meta property="og:url" content="http://caomage.com/top/index.html">
 <meta property="og:site_name" content="CAOMAGE">
-<meta property="og:description" content="时间是个庸医，却总说包治百病">
+<meta property="og:description" content="博客文章阅读量排行榜">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-23T10:44:40.191Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CAOMAGE">
-<meta name="twitter:description" content="时间是个庸医，却总说包治百病">
+<meta name="twitter:title" content="阅读排行">
+<meta name="twitter:description" content="博客文章阅读量排行榜">
 
 
 
@@ -163,13 +165,13 @@
 
 
 
-  <link rel="canonical" href="http://caomage.com/categories/兼容/">
+  <link rel="canonical" href="http://caomage.com/top/">
 
 
 
 
 
-    <title>分类: 兼容 | CAOMAGE</title>
+    <title>阅读排行 | CAOMAGE</title>
     
 
 
@@ -188,7 +190,7 @@
 
        
 
-    <div class="container sidebar-position-right ">
+    <div class="container sidebar-position-right page-post-detail">
         <div class="headband"></div>
        
         <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -344,53 +346,65 @@
                     <div id="content" class="content">
                         
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h2>兼容<small>分类</small>
-        </h2>
-      </div>
+	<h2 class="post-title" itemprop="name headline">阅读排行</h2>
+
+
+	<div class="post-meta">
+		<div class="post-description">博客文章阅读量排行榜</div>
+	</div>
+
+
+</header>
 
       
+      
+      
+      <div class="post-body">
         
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
         
-            <a class="post-title-link" href="/2017/11/jrx.html" itemprop="url">
-              
-                <span itemprop="name">常见的html、css以及javascript兼容方案</span>
-              
-            </a>
-        
-      </h3>
+          <p><div id="top"></div></p>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script>AV.initialize("LdXbjmwLiXSyuBqhFznEUCV7-gzGzoHsz", "NLB9BcNypXn12eKUJCoRU8VG");</script>
+<script type="text/javascript">
+  var time=0
+  var title=""
+  var url=""
+  var query = new AV.Query('Counter');
+  query.notEqualTo('id',0);
+  query.descending('time');
+  query.limit(1000);
+  query.find().then(function (todo) {
+    for (var i=0;i<1000;i++){
+      var result=todo[i].attributes;
+      time=result.time;
+      title=result.title;
+      url=result.url;
+      var content="<a href='"+"https://caomage"+url+"'>"+title+"</a>"+"<br />"+"<font color='#555'>"+"阅读次数："+time+"</font>"+"<br /><br />";
+      document.getElementById("top").innerHTML+=content
+    }
+  }, function (error) {
+    console.log("error");
+  });
+</script>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2017-11-04T10:50:40+08:00" content="2017-11-04">
-          11-04
-        </time>
+<style>.post-description { display: none; }</style>
+        
       </div>
-
-    </header>
-  </article>
-
-
+      
+      
       
     </div>
-
+    
+    
+    
   </div>
-  
-  
-  
-
-  
-
 
 
                     </div>
@@ -690,7 +704,15 @@ show_date_time();
 
   <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
 
-    
+   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+<script src="/js/src/photoswipe.min.js?v=5.1.4"></script>
+<script src="/js/src/photoswipe-ui-default.min.js?v=5.1.4"></script>
+
+
+ 
 
 
   <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
