@@ -132,7 +132,7 @@
 <meta property="og:site_name" content="CAOMAGE">
 <meta property="og:description" content="博客文章阅读量排行榜">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-23T10:44:40.191Z">
+<meta property="og:updated_time" content="2018-11-23T11:33:23.917Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="阅读排行">
 <meta name="twitter:description" content="博客文章阅读量排行榜">
@@ -386,7 +386,7 @@
       time=result.time;
       title=result.title;
       url=result.url;
-      var content="<a href='"+"https://caomage"+url+"'>"+title+"</a>"+"<br />"+"<font color='#555'>"+"阅读次数："+time+"</font>"+"<br /><br />";
+      var content="<font color='#555' class='topfont'>"+"【阅读次数：<span class='numberTop'>"+time+"</span>】</font>"+"<a href='"+"https://caomage.com"+url+"'>"+title+"</a><br /><br /><br />";
       document.getElementById("top").innerHTML+=content
     }
   }, function (error) {
@@ -448,7 +448,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
