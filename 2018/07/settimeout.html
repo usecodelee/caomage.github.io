@@ -113,7 +113,7 @@
 
 
 
-  <meta name="keywords" content="css sprite">
+  <meta name="keywords" content="JavaScript">
 
 
 
@@ -124,24 +124,20 @@
 
 
 
-<meta name="description" content="CSS雪碧图(sprite)是一种网页图片非常高效的处理方式，它是将页面中包含的零星图片利用PS制作到一张大图中，再结合background-position属性进行定位的的方式实现">
-<meta name="keywords" content="css sprite">
+<meta name="description" content="setTimeout定时器一些进价操作">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Sprite 从PS切图到具体实现完整过程">
-<meta property="og:url" content="http://caomage.com/sprite.html">
+<meta property="og:title" content="setTimeout定时器以及部分知识点">
+<meta property="og:url" content="http://caomage.com/2018/07/settimeout.html">
 <meta property="og:site_name" content="CAOMAGE">
-<meta property="og:description" content="CSS雪碧图(sprite)是一种网页图片非常高效的处理方式，它是将页面中包含的零星图片利用PS制作到一张大图中，再结合background-position属性进行定位的的方式实现">
+<meta property="og:description" content="setTimeout定时器一些进价操作">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://img.blog.csdn.net/20171020221744539?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY2FvbWFnZQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
-<meta property="og:image" content="http://img.blog.csdn.net/20171020221845428?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY2FvbWFnZQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
-<meta property="og:image" content="http://img.blog.csdn.net/20171020221910075?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY2FvbWFnZQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
-<meta property="og:image" content="http://img.blog.csdn.net/20171020222000548?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY2FvbWFnZQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
-<meta property="og:image" content="http://img.blog.csdn.net/20171020222026970?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY2FvbWFnZQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
-<meta property="og:updated_time" content="2018-11-17T06:15:10.432Z">
+<meta property="og:image" content="https://i.imgur.com/P8U5kYZ.png">
+<meta property="og:updated_time" content="2018-11-17T05:01:25.965Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sprite 从PS切图到具体实现完整过程">
-<meta name="twitter:description" content="CSS雪碧图(sprite)是一种网页图片非常高效的处理方式，它是将页面中包含的零星图片利用PS制作到一张大图中，再结合background-position属性进行定位的的方式实现">
-<meta name="twitter:image" content="http://img.blog.csdn.net/20171020221744539?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY2FvbWFnZQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
+<meta name="twitter:title" content="setTimeout定时器以及部分知识点">
+<meta name="twitter:description" content="setTimeout定时器一些进价操作">
+<meta name="twitter:image" content="https://i.imgur.com/P8U5kYZ.png">
 
 
 
@@ -171,13 +167,13 @@
 
 
 
-  <link rel="canonical" href="http://caomage.com/sprite.html">
+  <link rel="canonical" href="http://caomage.com/2018/07/settimeout.html">
 
 
 
 
 
-    <title>Sprite 从PS切图到具体实现完整过程 | CAOMAGE</title>
+    <title>setTimeout定时器以及部分知识点 | CAOMAGE</title>
     
 
 
@@ -356,7 +352,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://caomage.com/sprite.html">
+    <link itemprop="mainEntityOfPage" href="http://caomage.com/2018/07/settimeout.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="caomage">
@@ -373,7 +369,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Sprite 从PS切图到具体实现完整过程</h2>
+          <h2 class="post-title" itemprop="name headline">setTimeout定时器以及部分知识点</h2>
         
 
         <div class="post-meta">
@@ -385,8 +381,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-20T22:17:17+08:00">
-                2017-10-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-26T20:57:36+08:00">
+                2018-07-26
               </time>
             
 
@@ -408,8 +404,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/css/" itemprop="url" rel="index">
-                    <span itemprop="name">css</span>
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
                   </a>
                 </span>
 
@@ -426,8 +422,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/sprite.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/sprite.html" itemprop="commentCount"></span>
+                <a href="/2018/07/settimeout.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/07/settimeout.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -435,7 +431,7 @@
 
           
           
-             <span id="/sprite.html" class="leancloud_visitors" data-flag-title="Sprite 从PS切图到具体实现完整过程">
+             <span id="/2018/07/settimeout.html" class="leancloud_visitors" data-flag-title="setTimeout定时器以及部分知识点">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -461,7 +457,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  474
+                  792
                 </span>
               
 
@@ -477,7 +473,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  3
                 </span>
               
             </div>
@@ -485,7 +481,7 @@
 
           
               <div class="post-description">
-                  CSS雪碧图(sprite)是一种网页图片非常高效的处理方式，它是将页面中包含的零星图片利用PS制作到一张大图中，再结合background-position属性进行定位的的方式实现
+                  setTimeout定时器一些进价操作
               </div>
           
 
@@ -502,45 +498,21 @@
       
 
       
-        <h2 id="sprite的优点有以下方面："><a href="#sprite的优点有以下方面：" class="headerlink" title="sprite的优点有以下方面："></a>sprite的优点有以下方面：</h2><ul>
-<li>减少http请求次数。</li>
-<li>减少图片字节数（很多人有疑问为什么合在一起还会降低字节数，图片明明变大了。原因是这样的：每个图片都是有固定的格式的，包括图像头、版本号、appo块等等，这些属性都会占一定的字节数。因此合在一起回降低字节数）。</li>
+        <h2 id="难点："><a href="#难点：" class="headerlink" title="难点："></a>难点：</h2><ul>
+<li>按固定格式输出（hh:mm:ss）</li>
+<li>开始，暂停，开始</li>
+<li>解决多次点击开始会使定时器速度加快的问题  </li>
 </ul>
-<h2 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h2><ul>
-<li>维护成本增加，比如要修改或增加一个图标需要修改整张sprite图。</li>
-</ul>
-<h3 id="解决这一缺点的方法是："><a href="#解决这一缺点的方法是：" class="headerlink" title="解决这一缺点的方法是："></a>解决这一缺点的方法是：</h3><ul>
-<li>增加图标摆放的间隙。根据图片大小一般留20-40px的间隙。</li>
-</ul>
-<h3 id="图片合并的基本原则："><a href="#图片合并的基本原则：" class="headerlink" title="图片合并的基本原则："></a>图片合并的基本原则：</h3><blockquote>
-<ul>
-<li>色彩相近的合在一起</li>
-<li>大小相近的合在一起</li>
-<li>属于同一页面的合在一起</li>
-<li>有点击或hover状态改变的图标放在一起</li>
-</ul>
-</blockquote>
-<h2 id="具体实现："><a href="#具体实现：" class="headerlink" title="具体实现："></a>具体实现：</h2><h3 id="PS切图："><a href="#PS切图：" class="headerlink" title="PS切图："></a>PS切图：</h3><p>首先合并图层，然后使用举行选框工具选出需要切出的图标，接着使用魔棒工具+Alt去除多余的部分。最后保存到新建的图层。我这里使用的是Adobe公司的部分软件logo得到的结果如下：　　</p>
-<p><img src="http://img.blog.csdn.net/20171020221744539?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY2FvbWFnZQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="得到的结果"></p>
-<h3 id="CSS布局："><a href="#CSS布局：" class="headerlink" title="CSS布局："></a>CSS布局：</h3><blockquote>
-<p>HTML:使用ul_li标签布局</p>
-</blockquote>
-<p><img src="http://img.blog.csdn.net/20171020221845428?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY2FvbWFnZQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="布局"></p>
-<blockquote>
-<p>CSS：加上一些CSS属性之后</p>
-</blockquote>
-<p><img src="http://img.blog.csdn.net/20171020221910075?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY2FvbWFnZQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="加上一些CSS属性之后"></p>
-<blockquote>
-<p>使用before选择器，为每个li标签加上background-position属性之后：</p>
-</blockquote>
-<p><img src="http://img.blog.csdn.net/20171020222000548?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY2FvbWFnZQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="加上background-position属性之后"></p>
-<h3 id="详细解读：以PS为例。"><a href="#详细解读：以PS为例。" class="headerlink" title="详细解读：以PS为例。"></a>详细解读：以PS为例。</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.ps</span><span class="selector-pseudo">:before</span>&#123;</span><br><span class="line">	  <span class="attribute">background-position</span>:-<span class="number">45px</span>-<span class="number">21px</span>;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>其中<code>background-position</code>的第一个值表示PS图标左边距离整张sprite图左边的距离，第二个值表示PS图标上边距离整张sprite图上边的距离。直接上图：</p>
-</blockquote>
-<p><img src="http://img.blog.csdn.net/20171020222026970?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY2FvbWFnZQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="原理"></p>
-<p>但是我们看见实际运用的时候的值是负数，这就相当于把整张sprite往左边移动45px，往上移动21px。这些值可以用PS直接测量出来。</p>
-<p>最后附上demo源码下载地址：<a href="https://github.com/usecodelee/sprite" target="_blank" rel="noopener">https://github.com/usecodelee/sprite</a></p>
+<h3 id="1-按固定格式输出"><a href="#1-按固定格式输出" class="headerlink" title="1. 按固定格式输出"></a>1. 按固定格式输出</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">formatNumber</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">       <span class="keyword">return</span> num &lt; <span class="number">10</span> ? <span class="string">'0'</span> + num : num;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<p>思路：在每次输出之前格式化一下数据，使用三元运算符，如果小于10就在前面补0  </p>
+<h3 id="2-开始，暂停，开始"><a href="#2-开始，暂停，开始" class="headerlink" title="2. 开始，暂停，开始"></a>2. 开始，暂停，开始</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> flag = <span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Timer</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    flag = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (flag == <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (sec &lt;= <span class="number">59</span> &amp;&amp; sec &gt;= <span class="number">0</span> &amp;&amp; min &lt;= <span class="number">59</span> &amp;&amp; min &gt;= <span class="number">0</span> &amp;&amp; hou &lt;= <span class="number">59</span> &amp;&amp; hou &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="built_in">document</span>.getElementById(<span class="string">'showTime'</span>).innerHTML = formatN(hou) + <span class="string">":"</span> + formatN(min) + <span class="string">":"</span> + formatN(sec);</span><br><span class="line">            sec = sec + <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (min &lt;= <span class="number">59</span> &amp;&amp; min &gt;= <span class="number">0</span> &amp;&amp; hou &lt;= <span class="number">59</span> &amp;&amp; hou &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">            min = min + <span class="number">1</span>;</span><br><span class="line">            sec = <span class="number">0</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (hou &lt;= <span class="number">59</span> &amp;&amp; hou &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">            hou = hou + <span class="number">1</span>;</span><br><span class="line">            min = <span class="number">0</span>;</span><br><span class="line">            sec = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">window</span>.timer = setTimeout(<span class="string">"Timer()"</span>, <span class="number">1000</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">stop</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    clearTimeout(timer);</span><br><span class="line">    flag = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>思路：加一个标记flag，开始执行之后改变flag为原来的值并启动定时器，暂停的时候改变flag的值  </p>
+<h3 id="3-解决多次点击开始会使定时器速度加快的问题"><a href="#3-解决多次点击开始会使定时器速度加快的问题" class="headerlink" title="3. 解决多次点击开始会使定时器速度加快的问题"></a>3. 解决多次点击开始会使定时器速度加快的问题</h3><h4 id="出现这个问题的原因："><a href="#出现这个问题的原因：" class="headerlink" title="出现这个问题的原因："></a>出现这个问题的原因：</h4><p>假如你在0时刻点击了一下按钮，那么500ms时数字会跳一下，1000ms会再跳一下，依次类推，1500，2000，2500…..的时候都会跳一下，时间间隔始终是500ms，但是，假如你在300ms的时候又点击了一下按钮，那么800ms的时候数字就会跳一下，1300，1800，2300…..的时侯都会跳一下，那么现在看0到2000ms之间，300，500，800，1000，1300，1500，1800，2000时刻时数字都会跳一下，数字变化的时间间隔自然会变小，同理，你点击的次数越多，时间间隔就会越小。</p>
+<h4 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h4><p>每次启动定时器的时候先清一下定时器（clearTimeout()）,此时会有另一个问题，先清定时器会报错：定时器未定义，解决方法是：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="built_in">window</span>.t) clearTimeout(<span class="built_in">window</span>.t);</span><br><span class="line">	<span class="built_in">window</span>.t =  setTimeout(..... );</span><br></pre></td></tr></table></figure>
+<p><code>window</code>上即使未定义也不会报错。</p>
+<h2 id="完整代码："><a href="#完整代码：" class="headerlink" title="完整代码："></a>完整代码：</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css">        <span class="selector-id">#showTime</span> &#123;</span></span><br><span class="line"><span class="undefined">            color: red;</span></span><br><span class="line"><span class="undefined">            font-size: 30px;</span></span><br><span class="line"><span class="undefined">            font-weight: 700;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>setTimeout实现计时器<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> sec = <span class="number">0</span>;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> min = <span class="number">0</span>;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> hou = <span class="number">0</span>;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> flag = <span class="number">1</span>;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="function"><span class="keyword">function</span> <span class="title">Timer</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="undefined">            flag = 1;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">if</span> (flag == <span class="number">1</span>) &#123;</span></span><br><span class="line"><span class="xml">                if (sec <span class="tag">&lt;<span class="name">=</span> <span class="attr">59</span> &amp;&amp; <span class="attr">sec</span> &gt;</span>= 0 &amp;&amp; min <span class="tag">&lt;<span class="name">=</span> <span class="attr">59</span> &amp;&amp; <span class="attr">min</span> &gt;</span>= 0 &amp;&amp; hou <span class="tag">&lt;<span class="name">=</span> <span class="attr">59</span> &amp;&amp; <span class="attr">hou</span> &gt;</span>= 0) &#123;</span></span><br><span class="line"><span class="javascript">                    <span class="built_in">document</span>.getElementById(<span class="string">'showTime'</span>).innerHTML = formatNumber(hou) + <span class="string">":"</span> + formatNumber(min) + <span class="string">":"</span> +</span></span><br><span class="line"><span class="undefined">                        formatNumber(sec);;</span></span><br><span class="line"><span class="undefined">                    sec = sec + 1;</span></span><br><span class="line"><span class="javascript">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (min &lt;= <span class="number">59</span> &amp;&amp; min &gt;= <span class="number">0</span> &amp;&amp; hou &lt;= <span class="number">59</span> &amp;&amp; hou &gt;= <span class="number">0</span>) &#123;</span></span><br><span class="line"><span class="undefined">                    min = min + 1;</span></span><br><span class="line"><span class="undefined">                    sec = 0;</span></span><br><span class="line"><span class="javascript">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (hou &lt;= <span class="number">59</span> &amp;&amp; hou &gt;= <span class="number">0</span>) &#123;</span></span><br><span class="line"><span class="undefined">                    hou = hou + 1;</span></span><br><span class="line"><span class="undefined">                    min = 0;</span></span><br><span class="line"><span class="undefined">                    sec = 0;</span></span><br><span class="line"><span class="undefined">                &#125;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">if</span> (<span class="built_in">window</span>.timer) &#123;</span></span><br><span class="line"><span class="undefined">                    clearTimeout(timer);</span></span><br><span class="line"><span class="undefined">                &#125;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">window</span>.timer = setTimeout(<span class="string">"Timer()"</span>, <span class="number">1000</span>);</span></span><br><span class="line"><span class="undefined">            &#125;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="function"><span class="keyword">function</span> <span class="title">formatNumber</span>(<span class="params">num</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">return</span> num &lt; <span class="number">10</span> ? <span class="string">'0'</span> + num : num;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="function"><span class="keyword">function</span> <span class="title">stop</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="undefined">            clearTimeout(timer);</span></span><br><span class="line"><span class="undefined">            flag = 0;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"Timer()"</span>&gt;</span>开始计时<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"stop()"</span>&gt;</span>暂停计时<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"showTime"</span>&gt;</span>00:00:00<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="运行结果："><a href="#运行结果：" class="headerlink" title="运行结果："></a>运行结果：</h3><p><img src="https://i.imgur.com/P8U5kYZ.png" alt=""></p>
 
       
     </div>
@@ -571,7 +543,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://caomage.com/sprite.html" title="Sprite 从PS切图到具体实现完整过程">http://caomage.com/sprite.html</a>
+    <a href="http://caomage.com/2018/07/settimeout.html" title="setTimeout定时器以及部分知识点">http://caomage.com/2018/07/settimeout.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -586,7 +558,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/css/" rel="tag"><i class="fa fa-tag"></i> css</a>
+            <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
           
         </div>
       
@@ -599,8 +571,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/present.html" rel="next" title="Present轻量级加密算法C#实现">
-                <i class="fa fa-chevron-left"></i> Present轻量级加密算法C#实现
+              <a href="/2018/07/htmltoimg.html" rel="next" title="js实现截图并保存图片在本地">
+                <i class="fa fa-chevron-left"></i> js实现截图并保存图片在本地
               </a>
             
           </div>
@@ -609,8 +581,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/jrx.html" rel="prev" title="常见的html、css以及javascript兼容方案">
-                常见的html、css以及javascript兼容方案 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/onejs.html" rel="prev" title="JavaScript小知识点（一）">
+                JavaScript小知识点（一） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -693,7 +665,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -790,7 +762,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#sprite的优点有以下方面："><span class="nav-number">1.</span> <span class="nav-text">sprite的优点有以下方面：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缺点："><span class="nav-number">2.</span> <span class="nav-text">缺点：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#解决这一缺点的方法是："><span class="nav-number">2.1.</span> <span class="nav-text">解决这一缺点的方法是：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图片合并的基本原则："><span class="nav-number">2.2.</span> <span class="nav-text">图片合并的基本原则：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体实现："><span class="nav-number">3.</span> <span class="nav-text">具体实现：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PS切图："><span class="nav-number">3.1.</span> <span class="nav-text">PS切图：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS布局："><span class="nav-number">3.2.</span> <span class="nav-text">CSS布局：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#详细解读：以PS为例。"><span class="nav-number">3.3.</span> <span class="nav-text">详细解读：以PS为例。</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#难点："><span class="nav-number">1.</span> <span class="nav-text">难点：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-按固定格式输出"><span class="nav-number">1.1.</span> <span class="nav-text">1. 按固定格式输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-开始，暂停，开始"><span class="nav-number">1.2.</span> <span class="nav-text">2. 开始，暂停，开始</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-解决多次点击开始会使定时器速度加快的问题"><span class="nav-number">1.3.</span> <span class="nav-text">3. 解决多次点击开始会使定时器速度加快的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#出现这个问题的原因："><span class="nav-number">1.3.1.</span> <span class="nav-text">出现这个问题的原因：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方案："><span class="nav-number">1.3.2.</span> <span class="nav-text">解决方案：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完整代码："><span class="nav-number">2.</span> <span class="nav-text">完整代码：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#运行结果："><span class="nav-number">2.1.</span> <span class="nav-text">运行结果：</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -837,7 +809,7 @@
     
 <br>
 
-  <span class="post-count">&nbsp;博客全站共16.2k字</span>
+  <span class="post-count">&nbsp;博客全站共16.1k字</span>
 </div>
  
 

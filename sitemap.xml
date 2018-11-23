@@ -2,13 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://caomage.com/test.html</loc>
-    
-    <lastmod>2018-11-23T07:21:25.830Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://caomage.com/photos/data.json</loc>
     
     <lastmod>2018-11-22T13:11:31.027Z</lastmod>
@@ -16,14 +9,14 @@
   </url>
   
   <url>
-    <loc>http://caomage.com/structure.html</loc>
+    <loc>http://caomage.com/2018/11/structure.html</loc>
     
     <lastmod>2018-11-22T13:01:27.825Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://caomage.com/promise.html</loc>
+    <loc>http://caomage.com/2018/11/promise.html</loc>
     
     <lastmod>2018-11-21T12:01:53.302Z</lastmod>
     
@@ -37,126 +30,126 @@
   </url>
   
   <url>
-    <loc>http://caomage.com/3.html</loc>
+    <loc>http://caomage.com/2018/09/3.html</loc>
     
     <lastmod>2018-11-18T02:24:26.010Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://caomage.com/present.html</loc>
+    <loc>http://caomage.com/2017/10/present.html</loc>
     
     <lastmod>2018-11-17T06:21:59.985Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://caomage.com/sprite.html</loc>
+    <loc>http://caomage.com/2017/10/sprite.html</loc>
     
     <lastmod>2018-11-17T06:15:10.432Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://caomage.com/jrx.html</loc>
+    <loc>http://caomage.com/2017/11/jrx.html</loc>
     
     <lastmod>2018-11-17T05:52:43.861Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://caomage.com/jsexcel.html</loc>
+    <loc>http://caomage.com/2018/09/jsexcel.html</loc>
     
     <lastmod>2018-11-17T05:20:14.163Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://caomage.com/%E6%B1%89%E5%AD%97%E8%BD%AC%E6%8B%BC%E9%9F%B3.html</loc>
+    <loc>http://caomage.com/2018/11/%E6%B1%89%E5%AD%97%E8%BD%AC%E6%8B%BC%E9%9F%B3.html</loc>
     
     <lastmod>2018-11-17T05:02:54.302Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://caomage.com/twojs.html</loc>
+    <loc>http://caomage.com/2018/08/twojs.html</loc>
     
     <lastmod>2018-11-17T05:02:09.077Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://caomage.com/settimeout.html</loc>
+    <loc>http://caomage.com/2018/07/settimeout.html</loc>
     
     <lastmod>2018-11-17T05:01:25.965Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://caomage.com/onejs.html</loc>
+    <loc>http://caomage.com/2018/08/onejs.html</loc>
     
     <lastmod>2018-11-17T05:00:42.249Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://caomage.com/letandconst.html</loc>
+    <loc>http://caomage.com/2018/10/letandconst.html</loc>
     
     <lastmod>2018-11-17T04:59:11.694Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://caomage.com/htmltoimg.html</loc>
+    <loc>http://caomage.com/2018/07/htmltoimg.html</loc>
     
     <lastmod>2018-11-17T04:58:26.269Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://caomage.com/fibonacci.html</loc>
+    <loc>http://caomage.com/2018/09/fibonacci.html</loc>
     
     <lastmod>2018-11-17T04:57:37.697Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://caomage.com/eslinterror.html</loc>
+    <loc>http://caomage.com/2018/07/eslinterror.html</loc>
     
     <lastmod>2018-11-17T04:57:24.311Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://caomage.com/1.html</loc>
+    <loc>http://caomage.com/2018/10/1.html</loc>
     
     <lastmod>2018-11-17T04:56:13.471Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://caomage.com/dragdrop.html</loc>
+    <loc>http://caomage.com/2018/11/dragdrop.html</loc>
     
     <lastmod>2018-11-17T04:56:08.589Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://caomage.com/customright.html</loc>
+    <loc>http://caomage.com/2018/07/customright.html</loc>
     
     <lastmod>2018-11-17T04:56:02.656Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://caomage.com/2.html</loc>
+    <loc>http://caomage.com/2018/11/2.html</loc>
     
     <lastmod>2018-11-17T04:55:53.178Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://caomage.com/eslintall.html</loc>
+    <loc>http://caomage.com/2018/07/eslintall.html</loc>
     
     <lastmod>2018-11-17T04:55:43.406Z</lastmod>
     
@@ -180,13 +173,6 @@
     <loc>http://caomage.com/tags/index.html</loc>
     
     <lastmod>2018-11-14T13:52:00.738Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://caomage.com/top/index.html</loc>
-    
-    <lastmod>2018-11-10T06:33:59.320Z</lastmod>
     
   </url>
   

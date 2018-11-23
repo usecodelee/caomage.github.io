@@ -113,7 +113,7 @@
 
 
 
-  <meta name="keywords" content="JSON JavaScript">
+  <meta name="keywords" content="ES6 JavaScript">
 
 
 
@@ -124,18 +124,18 @@
 
 
 
-<meta name="description" content="使用最笨的方法判断两个json是否相等">
-<meta name="keywords" content="JSON JavaScript">
+<meta name="description" content="解构赋值语法是一个Javascript表达式，这使得可以将值从数组或属性从对象提取到不同的变量中，文中主要讲数组的解构赋值、对象的解构赋值、字符串的解构赋值、数值和布尔值的解构赋值以及函数参数的解构赋值">
+<meta name="keywords" content="ES6 JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="判断两个json是否相等">
-<meta property="og:url" content="http://caomage.com/2.html">
+<meta property="og:title" content="ES6（三）：变量的解构赋值">
+<meta property="og:url" content="http://caomage.com/2018/11/structure.html">
 <meta property="og:site_name" content="CAOMAGE">
-<meta property="og:description" content="使用最笨的方法判断两个json是否相等">
+<meta property="og:description" content="解构赋值语法是一个Javascript表达式，这使得可以将值从数组或属性从对象提取到不同的变量中，文中主要讲数组的解构赋值、对象的解构赋值、字符串的解构赋值、数值和布尔值的解构赋值以及函数参数的解构赋值">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-17T04:55:53.178Z">
+<meta property="og:updated_time" content="2018-11-22T13:01:27.825Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="判断两个json是否相等">
-<meta name="twitter:description" content="使用最笨的方法判断两个json是否相等">
+<meta name="twitter:title" content="ES6（三）：变量的解构赋值">
+<meta name="twitter:description" content="解构赋值语法是一个Javascript表达式，这使得可以将值从数组或属性从对象提取到不同的变量中，文中主要讲数组的解构赋值、对象的解构赋值、字符串的解构赋值、数值和布尔值的解构赋值以及函数参数的解构赋值">
 
 
 
@@ -165,13 +165,13 @@
 
 
 
-  <link rel="canonical" href="http://caomage.com/2.html">
+  <link rel="canonical" href="http://caomage.com/2018/11/structure.html">
 
 
 
 
 
-    <title>判断两个json是否相等 | CAOMAGE</title>
+    <title>ES6（三）：变量的解构赋值 | CAOMAGE</title>
     
 
 
@@ -350,7 +350,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://caomage.com/2.html">
+    <link itemprop="mainEntityOfPage" href="http://caomage.com/2018/11/structure.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="caomage">
@@ -367,7 +367,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">判断两个json是否相等</h2>
+          <h2 class="post-title" itemprop="name headline">ES6（三）：变量的解构赋值</h2>
         
 
         <div class="post-meta">
@@ -379,8 +379,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-05T19:10:06+08:00">
-                2018-11-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-22T20:59:00+08:00">
+                2018-11-22
               </time>
             
 
@@ -402,8 +402,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/JSON/" itemprop="url" rel="index">
-                    <span itemprop="name">JSON</span>
+                  <a href="/categories/ES6/" itemprop="url" rel="index">
+                    <span itemprop="name">ES6</span>
                   </a>
                 </span>
 
@@ -420,8 +420,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2.html" itemprop="commentCount"></span>
+                <a href="/2018/11/structure.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/11/structure.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -429,7 +429,7 @@
 
           
           
-             <span id="/2.html" class="leancloud_visitors" data-flag-title="判断两个json是否相等">
+             <span id="/2018/11/structure.html" class="leancloud_visitors" data-flag-title="ES6（三）：变量的解构赋值">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -455,7 +455,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  154
+                  1.1k
                 </span>
               
 
@@ -471,7 +471,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  4
                 </span>
               
             </div>
@@ -479,7 +479,7 @@
 
           
               <div class="post-description">
-                  使用最笨的方法判断两个json是否相等
+                  解构赋值语法是一个Javascript表达式，这使得可以将值从数组或属性从对象提取到不同的变量中，文中主要讲数组的解构赋值、对象的解构赋值、字符串的解构赋值、数值和布尔值的解构赋值以及函数参数的解构赋值
               </div>
           
 
@@ -496,11 +496,50 @@
       
 
       
-        <h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><blockquote>
-<p>暴力的递归遍历对比，遇到不相等就<code>return false</code>  </p>
+        <h2 id="数组的解构赋值"><a href="#数组的解构赋值" class="headerlink" title="数组的解构赋值"></a>数组的解构赋值</h2><h3 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h3><h4 id="ES6以前我们如果要定义三个变量的话需要这样做："><a href="#ES6以前我们如果要定义三个变量的话需要这样做：" class="headerlink" title="ES6以前我们如果要定义三个变量的话需要这样做："></a>ES6以前我们如果要定义三个变量的话需要这样做：</h4><p><strong><em>code</em></strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>,</span><br><span class="line">    b = <span class="number">2</span>,</span><br><span class="line">    c = <span class="number">3</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">console</span>.log(b); <span class="comment">// 2</span></span><br><span class="line"><span class="built_in">console</span>.log(c); <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+<h4 id="使用解构赋值的话就好比“模式匹配”一般："><a href="#使用解构赋值的话就好比“模式匹配”一般：" class="headerlink" title="使用解构赋值的话就好比“模式匹配”一般："></a>使用解构赋值的话就好比“模式匹配”一般：</h4><p><strong><em>code</em></strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [a, b, c] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">console</span>.log(b); <span class="comment">// 2</span></span><br><span class="line"><span class="built_in">console</span>.log(c); <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+<h4 id="只要等号两边的模式一样，就可以成功解构赋值："><a href="#只要等号两边的模式一样，就可以成功解构赋值：" class="headerlink" title="只要等号两边的模式一样，就可以成功解构赋值："></a>只要等号两边的模式一样，就可以成功解构赋值：</h4><p><strong><em>code</em></strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [</span><br><span class="line">    [a, [b]], c</span><br><span class="line">] = [</span><br><span class="line">    [<span class="number">1</span>, [<span class="number">2</span>]], <span class="number">3</span></span><br><span class="line">];</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">console</span>.log(b); <span class="comment">// 2</span></span><br><span class="line"><span class="built_in">console</span>.log(c); <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+<h4 id="如果两边的模式相同，但是右边少值的话就会解构不成功，导致左边的变量值为undefined："><a href="#如果两边的模式相同，但是右边少值的话就会解构不成功，导致左边的变量值为undefined：" class="headerlink" title="如果两边的模式相同，但是右边少值的话就会解构不成功，导致左边的变量值为undefined："></a>如果两边的模式相同，但是右边少值的话就会解构不成功，导致左边的变量值为<code>undefined</code>：</h4><p><strong><em>cdoe</em></strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [</span><br><span class="line">    [a, [b]], c</span><br><span class="line">] = [</span><br><span class="line">    [<span class="number">1</span>, []], <span class="number">3</span></span><br><span class="line">];</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">console</span>.log(b); <span class="comment">// undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(c); <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+<h4 id="如果两边模式相同，但是左边少变量的话，依然可以将已有的变量赋值成功："><a href="#如果两边模式相同，但是左边少变量的话，依然可以将已有的变量赋值成功：" class="headerlink" title="如果两边模式相同，但是左边少变量的话，依然可以将已有的变量赋值成功："></a>如果两边模式相同，但是左边少变量的话，依然可以将已有的变量赋值成功：</h4><p><strong><em>cdoe</em></strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [</span><br><span class="line">    [a, [b]],</span><br><span class="line">] = [</span><br><span class="line">    [<span class="number">1</span>, [<span class="number">2</span>]], <span class="number">3</span></span><br><span class="line">];</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">console</span>.log(b); <span class="comment">// 2</span></span><br><span class="line"><span class="built_in">console</span>.log(c); <span class="comment">// ReferenceError: c is not defined</span></span><br></pre></td></tr></table></figure>
+<h4 id="等号的右边如果不是可遍历的机构则会报错："><a href="#等号的右边如果不是可遍历的机构则会报错：" class="headerlink" title="等号的右边如果不是可遍历的机构则会报错："></a>等号的右边如果不是可遍历的机构则会报错：</h4><p><strong><em>cdoe</em></strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [a] = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// TypeError: 1 is not iterable</span></span><br><span class="line"><span class="keyword">let</span> [a] = <span class="literal">false</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// TypeError: false is not iterable</span></span><br><span class="line"><span class="keyword">let</span> [a] = <span class="literal">NaN</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// TypeError: NaN is not iterable</span></span><br><span class="line"><span class="keyword">let</span> [a] = <span class="literal">undefined</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// TypeError: undefined is not iterable</span></span><br><span class="line"><span class="keyword">let</span> [a] = <span class="literal">null</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// TypeError: null is not iterable</span></span><br><span class="line"><span class="keyword">let</span> [a] = &#123;&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// TypeError: &#123;&#125; is not iterable</span></span><br></pre></td></tr></table></figure>
+<h3 id="指定默认值"><a href="#指定默认值" class="headerlink" title="指定默认值"></a>指定默认值</h3><p>在解构赋值中允许指定默认值。当一个位置没有值的时候，页就是当模式相同，但是右边没有值的时候可以指定默认值：  </p>
+<p><strong><em>code</em></strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [</span><br><span class="line">    [a, [b = <span class="number">4</span>]], c</span><br><span class="line">] = [</span><br><span class="line">    [<span class="number">1</span>, []], <span class="number">3</span></span><br><span class="line">];</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">console</span>.log(b); <span class="comment">// 4</span></span><br><span class="line"><span class="built_in">console</span>.log(c); <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>注意：</strong><code>ES6</code>内部使用严格相等运算符（<code>===</code>）判断一个位置是否有值。所以只有当一个数组成员严格等于<code>undefined</code>，默认值才会生效。  </p>
 </blockquote>
-<p><strong><em>code：</em></strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">let</span> jsonObjA = &#123;</span><br><span class="line">    <span class="string">"Name"</span>: <span class="string">"MyName"</span>,</span><br><span class="line">    <span class="string">"Company"</span>: <span class="string">"MyCompany"</span>,</span><br><span class="line">    <span class="string">"Infos"</span>: [&#123;</span><br><span class="line">        <span class="string">"Age"</span>: <span class="string">"100"</span></span><br><span class="line">    &#125;, &#123;</span><br><span class="line">        <span class="string">"Box"</span>: [&#123;</span><br><span class="line">            <span class="string">"Height"</span>: <span class="string">"100"</span></span><br><span class="line">        &#125;, &#123;</span><br><span class="line">            <span class="string">"Weight"</span>: <span class="string">"200"</span></span><br><span class="line">        &#125;]</span><br><span class="line">    &#125;],</span><br><span class="line">    <span class="string">"Address"</span>: <span class="string">"undefined"</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">let</span> jsonObjB = &#123;</span><br><span class="line">    <span class="string">"Name"</span>: <span class="string">"MyName"</span>,</span><br><span class="line">    <span class="string">"Company"</span>: <span class="string">"MyCompany"</span>,</span><br><span class="line">    <span class="string">"Infos"</span>: [&#123;</span><br><span class="line">        <span class="string">"Age"</span>: <span class="string">"100"</span></span><br><span class="line">    &#125;, &#123;</span><br><span class="line">        <span class="string">"Box"</span>: [&#123;</span><br><span class="line">            <span class="string">"Height"</span>: <span class="string">"100"</span></span><br><span class="line">        &#125;, &#123;</span><br><span class="line">            <span class="string">"Weight"</span>: <span class="string">"200"</span></span><br><span class="line">        &#125;]</span><br><span class="line">    &#125;],</span><br><span class="line">    <span class="string">"Address"</span>: <span class="string">"undefined"</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">compreObj</span>(<span class="params">obj1, obj2</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> flag = <span class="literal">true</span>;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">compre</span>(<span class="params">obj1, obj2</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">Object</span>.keys(obj1).length != <span class="built_in">Object</span>.keys(obj2).length) &#123;</span><br><span class="line">            flag = <span class="literal">false</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">let</span> x <span class="keyword">in</span> obj1) &#123;</span><br><span class="line">                <span class="keyword">if</span> (obj2.hasOwnProperty(x)) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (obj1[x] !== obj2[x]) &#123;</span><br><span class="line">                        compre(obj1[x], obj2[x]);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    flag = <span class="literal">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (flag === <span class="literal">false</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> compre(obj1, obj2)</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(compreObj(jsonObjA, jsonObjB));</span><br></pre></td></tr></table></figure>
+<h2 id="对象的解构赋值"><a href="#对象的解构赋值" class="headerlink" title="对象的解构赋值"></a>对象的解构赋值</h2><h3 id="变量的解构赋值和数组的解构赋值不太一样："><a href="#变量的解构赋值和数组的解构赋值不太一样：" class="headerlink" title="变量的解构赋值和数组的解构赋值不太一样："></a>变量的解构赋值和数组的解构赋值不太一样：</h3><blockquote>
+<p>数组的解构赋值：元素是按次序排列的，变量的取值由变量所处的位置决定<br>对象的解构赋值：对象的属性没有次序，因此变量必须和属性同名才能取到 正确的值</p>
+</blockquote>
+<p><strong>*code</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> &#123; foo, bar &#125; = &#123; <span class="attr">bar</span>: <span class="string">'我是bar'</span>, <span class="attr">foo</span>: <span class="string">'我是foo'</span> &#125;</span><br><span class="line"><span class="built_in">console</span>.log(foo); <span class="comment">// 我是foo</span></span><br><span class="line"><span class="built_in">console</span>.log(bar); <span class="comment">// 我是bar</span></span><br></pre></td></tr></table></figure>
+<p>从代码中可以看出来对象解构赋值的时候是和顺序无关的，而属性名字就显得尤为重要。  </p>
+<h3 id="变量名与属性名不一致时如何解构赋值"><a href="#变量名与属性名不一致时如何解构赋值" class="headerlink" title="变量名与属性名不一致时如何解构赋值"></a>变量名与属性名不一致时如何解构赋值</h3><p><strong><em>code</em></strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> &#123; <span class="attr">bar</span>: foo &#125; = &#123; <span class="attr">bar</span>: <span class="string">'我是bar'</span> &#125;</span><br><span class="line"><span class="built_in">console</span>.log(foo); <span class="comment">// 我是bar</span></span><br><span class="line"><span class="built_in">console</span>.log(bar); <span class="comment">// ReferenceError: bar is not defined</span></span><br></pre></td></tr></table></figure>
+<p>以上代码的作用是把右边的<code>bar</code>解构赋值给<code>foo</code>，因为属性名不一样，所以需要用这种方式进行。</p>
+<h3 id="数组是特殊的对象"><a href="#数组是特殊的对象" class="headerlink" title="数组是特殊的对象"></a>数组是特殊的对象</h3><p>由于数组是特殊的对象，所以数组也支持对象属性的解构赋值：  </p>
+<p><strong><em>code</em></strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">let</span> &#123; <span class="number">0</span>: first, <span class="number">1</span>: second, <span class="number">2</span>: last &#125; = arr;</span><br><span class="line"><span class="built_in">console</span>.log(first); <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">console</span>.log(second); <span class="comment">// 2</span></span><br><span class="line"><span class="built_in">console</span>.log(last); <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+<h2 id="字符串的解构赋值"><a href="#字符串的解构赋值" class="headerlink" title="字符串的解构赋值"></a>字符串的解构赋值</h2><p>字符串在进行解构赋值的时候其实是被转化成为了一个类数组的对象。  </p>
+<p><strong><em>code</em></strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [a, b, c, d, e, f] = <span class="string">'string'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// s</span></span><br><span class="line"><span class="built_in">console</span>.log(b); <span class="comment">// t</span></span><br><span class="line"><span class="built_in">console</span>.log(c); <span class="comment">// r</span></span><br><span class="line"><span class="built_in">console</span>.log(d); <span class="comment">// i</span></span><br><span class="line"><span class="built_in">console</span>.log(e); <span class="comment">// n</span></span><br><span class="line"><span class="built_in">console</span>.log(f); <span class="comment">// g</span></span><br></pre></td></tr></table></figure>
+<p>因为字符串具有<code>length</code>这个属性，因此我们还可以对该属性进行解构赋值：  </p>
+<p><strong><em>code</em></strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> &#123; <span class="attr">length</span>: len &#125; = <span class="string">'string'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(len); <span class="comment">// 6</span></span><br></pre></td></tr></table></figure>
+<h2 id="数值和布尔值的解构赋值"><a href="#数值和布尔值的解构赋值" class="headerlink" title="数值和布尔值的解构赋值"></a>数值和布尔值的解构赋值</h2><p>数值和布尔值也能进行解构赋值，此时他们都被转化为了对象。  </p>
+<p><strong><em>code</em></strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> &#123; <span class="attr">toString</span>: tos1 &#125; = <span class="number">456</span>;</span><br><span class="line"><span class="keyword">let</span> &#123; <span class="attr">toString</span>: tos2 &#125; = <span class="literal">false</span>;</span><br><span class="line"><span class="built_in">console</span>.log(tos1 === <span class="built_in">Number</span>.prototype.toString); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(tos2 === <span class="built_in">Boolean</span>.prototype.toString); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<h2 id="函数参数的解构赋值"><a href="#函数参数的解构赋值" class="headerlink" title="函数参数的解构赋值"></a>函数参数的解构赋值</h2><p>函数的参数也可以进行解构赋值，这是一个解构赋值运用比较多的场景，其实就是对之前所讲的数组、对象、布尔值、数值解构赋值的一种实际使用：  </p>
+<p><strong><em>code</em></strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">[a, b]</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(add([<span class="number">2</span>, <span class="number">3</span>])); <span class="comment">// 5</span></span><br></pre></td></tr></table></figure>
+<p>这样做会让传参更加便捷，因为在传参的时候我们可以加入默认值，避免了<code>a = ea || 0;</code>这种类似的语句出现。解构赋值还是很好用的，熟悉之后会让我们的js语句更加合理，更加易于维护。</p>
+
       
     </div>
     
@@ -530,7 +569,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://caomage.com/2.html" title="判断两个json是否相等">http://caomage.com/2.html</a>
+    <a href="http://caomage.com/2018/11/structure.html" title="ES6（三）：变量的解构赋值">http://caomage.com/2018/11/structure.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -545,7 +584,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JSON-JavaScript/" rel="tag"><i class="fa fa-tag"></i> JSON JavaScript</a>
+            <a href="/tags/ES6/" rel="tag"><i class="fa fa-tag"></i> ES6</a>
           
         </div>
       
@@ -558,8 +597,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/letandconst.html" rel="next" title="ES6（一）：let和const">
-                <i class="fa fa-chevron-left"></i> ES6（一）：let和const
+              <a href="/2018/11/promise.html" rel="next" title="ES6（二）：Promise">
+                <i class="fa fa-chevron-left"></i> ES6（二）：Promise
               </a>
             
           </div>
@@ -567,10 +606,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/汉字转拼音.html" rel="prev" title="汉语拼音转换（hàn yǔ pīn yīn zhuǎn huàn）">
-                汉语拼音转换（hàn yǔ pīn yīn zhuǎn huàn） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -652,7 +687,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -749,7 +784,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#原理"><span class="nav-number">1.</span> <span class="nav-text">原理</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数组的解构赋值"><span class="nav-number">1.</span> <span class="nav-text">数组的解构赋值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本用法"><span class="nav-number">1.1.</span> <span class="nav-text">基本用法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ES6以前我们如果要定义三个变量的话需要这样做："><span class="nav-number">1.1.1.</span> <span class="nav-text">ES6以前我们如果要定义三个变量的话需要这样做：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用解构赋值的话就好比“模式匹配”一般："><span class="nav-number">1.1.2.</span> <span class="nav-text">使用解构赋值的话就好比“模式匹配”一般：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#只要等号两边的模式一样，就可以成功解构赋值："><span class="nav-number">1.1.3.</span> <span class="nav-text">只要等号两边的模式一样，就可以成功解构赋值：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如果两边的模式相同，但是右边少值的话就会解构不成功，导致左边的变量值为undefined："><span class="nav-number">1.1.4.</span> <span class="nav-text">如果两边的模式相同，但是右边少值的话就会解构不成功，导致左边的变量值为undefined：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如果两边模式相同，但是左边少变量的话，依然可以将已有的变量赋值成功："><span class="nav-number">1.1.5.</span> <span class="nav-text">如果两边模式相同，但是左边少变量的话，依然可以将已有的变量赋值成功：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#等号的右边如果不是可遍历的机构则会报错："><span class="nav-number">1.1.6.</span> <span class="nav-text">等号的右边如果不是可遍历的机构则会报错：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指定默认值"><span class="nav-number">1.2.</span> <span class="nav-text">指定默认值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象的解构赋值"><span class="nav-number">2.</span> <span class="nav-text">对象的解构赋值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#变量的解构赋值和数组的解构赋值不太一样："><span class="nav-number">2.1.</span> <span class="nav-text">变量的解构赋值和数组的解构赋值不太一样：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量名与属性名不一致时如何解构赋值"><span class="nav-number">2.2.</span> <span class="nav-text">变量名与属性名不一致时如何解构赋值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组是特殊的对象"><span class="nav-number">2.3.</span> <span class="nav-text">数组是特殊的对象</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串的解构赋值"><span class="nav-number">3.</span> <span class="nav-text">字符串的解构赋值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数值和布尔值的解构赋值"><span class="nav-number">4.</span> <span class="nav-text">数值和布尔值的解构赋值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数参数的解构赋值"><span class="nav-number">5.</span> <span class="nav-text">函数参数的解构赋值</span></a></li></ol></div>
             
 
           </div>
@@ -796,7 +831,7 @@
     
 <br>
 
-  <span class="post-count">&nbsp;博客全站共16.2k字</span>
+  <span class="post-count">&nbsp;博客全站共16.1k字</span>
 </div>
  
 
