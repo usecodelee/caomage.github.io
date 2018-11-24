@@ -1314,11 +1314,6 @@ pre .javascript .function {
   -o-transform: rotate(30deg);
   transform: rotate(30deg);
 }
-.use-motion .post-block,
-.use-motion .pagination,
-.use-motion .comments {
-  opacity: 0;
-}
 .use-motion .post-header {
   opacity: 0;
 }
@@ -1524,7 +1519,6 @@ pre .javascript .function {
   position: relative;
   color: #555;
   border-bottom: none;
-  line-height: 1.2;
   vertical-align: top;
 }
 .posts-expand .post-title-link::before {
@@ -2039,7 +2033,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #9804ff;
+  background: #b1d91c;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3226,8 +3220,8 @@ hr {
   -moz-box-shadow: 0px 0px 6px #333;
   -webkit-box-shadow: 0px 0px 6px #333;
   box-shadow: 0px 0px 6px #333;
-  border-radius: 17px;
-  padding: 20px;
+  border-radius: 24.2px;
+  padding: 5px 0 5px 0;
   color: #fff;
 }
 .post-title {
@@ -3235,10 +3229,8 @@ hr {
   -moz-box-shadow: 0px 0px 6px #333;
   -webkit-box-shadow: 0px 0px 6px #333;
   box-shadow: 0px 0px 6px #333;
-  border-radius: 17px;
   padding: 5px 0 5px 0;
 /* vertical-align: middle; */
-  line-height: 8px;
 }
 .post-title .post-title-link {
   color: #fff;
@@ -3254,10 +3246,27 @@ hr {
   box-shadow: 0px 0px 0px #333;
   border: none;
   padding: 5px 0 5px 0;
-/* vertical-align: middle; */
-  line-height: 8px;
   text-align: left;
 }
 .posts-collapse .post {
   border: none;
+}
+.photos .thumb {
+  border: 2px dashed #c99;
+  width: 20%;
+  padding-bottom: 20%;
+}
+@media screen and (max-width: 600px) {
+  .instagram .thumb {
+    width: 48% !important;
+    padding-bottom: 48% !important;
+  }
+}
+.post-body p {
+  margin: 0;
+}
+.post-block a:hover {
+  text-decoration: none !important;
+  border: none !important;
+  border-bottom: none !important;
 }
