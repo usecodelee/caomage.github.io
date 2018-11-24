@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[test]]></title>
-    <url>%2F2018%2F11%2Ftest.html</url>
-    <content type="text"></content>
+    <title><![CDATA[读了《撒哈拉的故事》之后]]></title>
+    <url>%2F2018%2F11%2Fthestoryofsahara.html</url>
+    <content type="text"><![CDATA[还在读高中的时候就听见同学们讨论有关三毛这位作家，以及她的作品。但是挣扎在五年高考三年模拟中无法自拔我的是不可能也是不被允许去看这么多“无关的书”的。现在读完，感慨万千。 荷西有一个很大的优点，任何三毛所做的事情，在别人看来也许是疯狂的行为，在他看来却是理所当然的。所以跟他在一起也是很愉快的事。]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>杂谈</tag>
+        <tag>读书</tag>
+        <tag>爱情</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[ES6（三）：变量的解构赋值]]></title>
