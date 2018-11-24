@@ -2034,7 +2034,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #54440a;
+  background: #09ffff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3385,6 +3385,9 @@ img:hover {
 }
 .post-body {
   margin-top: -50px;
+}
+.page .post-body {
+  margin-top: 20px;
 }
 .page-post-detail .post-body p {
   text-indent: 28px;
