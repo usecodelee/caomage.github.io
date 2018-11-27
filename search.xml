@@ -226,7 +226,7 @@
   <entry>
     <title><![CDATA[Sprite 从PS切图到具体实现完整过程]]></title>
     <url>%2F2017%2F10%2Fsprite.html</url>
-    <content type="text"><![CDATA[sprite的优点有以下方面： 减少http请求次数。 减少图片字节数（很多人有疑问为什么合在一起还会降低字节数，图片明明变大了。原因是这样的：每个图片都是有固定的格式的，包括图像头、版本号、appo块等等，这些属性都会占一定的字节数。因此合在一起回降低字节数）。 缺点： 维护成本增加，比如要修改或增加一个图标需要修改整张sprite图。 解决这一缺点的方法是： 增加图标摆放的间隙。根据图片大小一般留20-40px的间隙。 图片合并的基本原则： 色彩相近的合在一起 大小相近的合在一起 属于同一页面的合在一起 有点击或hover状态改变的图标放在一起 具体实现：PS切图：首先合并图层，然后使用举行选框工具选出需要切出的图标，接着使用魔棒工具+Alt去除多余的部分。最后保存到新建的图层。我这里使用的是Adobe公司的部分软件logo得到的结果如下： CSS布局： HTML:使用ul_li标签布局 CSS：加上一些CSS属性之后 使用before选择器，为每个li标签加上background-position属性之后： 详细解读：以PS为例。123.ps:before&#123; background-position:-45px-21px; &#125; 其中background-position的第一个值表示PS图标左边距离整张sprite图左边的距离，第二个值表示PS图标上边距离整张sprite图上边的距离。直接上图： 但是我们看见实际运用的时候的值是负数，这就相当于把整张sprite往左边移动45px，往上移动21px。这些值可以用PS直接测量出来。 最后附上demo源码下载地址：https://github.com/usecodelee/sprite]]></content>
+    <content type="text"><![CDATA[sprite的优点有以下方面： 减少http请求次数。 减少图片字节数（很多人有疑问为什么合在一起还会降低字节数，图片明明变大了。原因是这样的：每个图片都是有固定的格式的，包括图像头、版本号、appo块等等，这些属性都会占一定的字节数。因此合在一起回降低字节数）。 缺点： 维护成本增加，比如要修改或增加一个图标需要修改整张sprite图。 解决这一缺点的方法是： 增加图标摆放的间隙。根据图片大小一般留20-40px的间隙。 图片合并的基本原则： 色彩相近的合在一起 大小相近的合在一起 属于同一页面的合在一起 有点击或hover状态改变的图标放在一起 具体实现：PS切图：首先合并图层，然后使用举行选框工具选出需要切出的图标，接着使用魔棒工具+Alt去除多余的部分。最后保存到新建的图层。我这里使用的是Adobe公司的部分软件logo得到的结果如下： CSS布局： HTML:使用ul_li标签布局 CSS：加上一些CSS属性之后 使用before选择器，为每个li标签加上background-position属性之后： 详细解读：以PS为例。123.ps:before&#123; background-position:-45px-21px;&#125; 其中background-position的第一个值表示PS图标左边距离整张sprite图左边的距离，第二个值表示PS图标上边距离整张sprite图上边的距离。直接上图： 但是我们看见实际运用的时候的值是负数，这就相当于把整张sprite往左边移动45px，往上移动21px。这些值可以用PS直接测量出来。 最后附上demo源码下载地址：https://github.com/usecodelee/sprite]]></content>
       <categories>
         <category>css</category>
       </categories>

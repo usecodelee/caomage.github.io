@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://caomage.com/2017/10/sprite.html</loc>
+    <lastmod>2018-11-27T07:38:09.809Z</lastmod>
+  </url>  <url>
+    <loc>http://caomage.com/2017/10/present.html</loc>
+    <lastmod>2018-11-27T07:30:09.940Z</lastmod>
+  </url>  <url>
     <loc>http://caomage.com/2018/11/topinyin.html</loc>
     <lastmod>2018-11-25T02:05:25.476Z</lastmod>
   </url>  <url>
@@ -10,17 +16,11 @@
     <loc>http://caomage.com/2018/11/structure.html</loc>
     <lastmod>2018-11-25T02:04:56.928Z</lastmod>
   </url>  <url>
-    <loc>http://caomage.com/2017/10/sprite.html</loc>
-    <lastmod>2018-11-25T02:04:53.393Z</lastmod>
-  </url>  <url>
     <loc>http://caomage.com/2018/07/settimeout.html</loc>
     <lastmod>2018-11-25T02:04:49.493Z</lastmod>
   </url>  <url>
     <loc>http://caomage.com/2018/11/promise.html</loc>
     <lastmod>2018-11-25T02:04:45.483Z</lastmod>
-  </url>  <url>
-    <loc>http://caomage.com/2017/10/present.html</loc>
-    <lastmod>2018-11-25T02:04:42.171Z</lastmod>
   </url>  <url>
     <loc>http://caomage.com/2018/08/onejs.html</loc>
     <lastmod>2018-11-25T02:04:38.374Z</lastmod>
