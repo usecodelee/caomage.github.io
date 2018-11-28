@@ -127,14 +127,14 @@
 <meta name="description" content="最近在看算法书的时候看到C++中的sort方法，书中介绍是使用的快速排序。于是想起来自己天天都在写的JavaScript中的sort排序，它使用的是什么排序算法呢？各个浏览器使用的是同一种排序算法吗？">
 <meta name="keywords" content="JavaScript,算法,排序算法,快速排序,归并排序,桶排序,插入排序">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript中数组排序sort深入理解（Array.prototype.sort）">
+<meta property="og:title" content="【JavaScript】JavaScript中数组排序sort深入理解（Array.prototype.sort）">
 <meta property="og:url" content="http://caomage.com/2018/11/arraysort.html">
 <meta property="og:site_name" content="CAOMAGE">
 <meta property="og:description" content="最近在看算法书的时候看到C++中的sort方法，书中介绍是使用的快速排序。于是想起来自己天天都在写的JavaScript中的sort排序，它使用的是什么排序算法呢？各个浏览器使用的是同一种排序算法吗？">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-28T04:42:49.214Z">
+<meta property="og:updated_time" content="2018-11-28T04:59:48.837Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript中数组排序sort深入理解（Array.prototype.sort）">
+<meta name="twitter:title" content="【JavaScript】JavaScript中数组排序sort深入理解（Array.prototype.sort）">
 <meta name="twitter:description" content="最近在看算法书的时候看到C++中的sort方法，书中介绍是使用的快速排序。于是想起来自己天天都在写的JavaScript中的sort排序，它使用的是什么排序算法呢？各个浏览器使用的是同一种排序算法吗？">
 
 
@@ -171,7 +171,7 @@
 
 
 
-    <title>JavaScript中数组排序sort深入理解（Array.prototype.sort） | CAOMAGE</title>
+    <title>【JavaScript】JavaScript中数组排序sort深入理解（Array.prototype.sort） | CAOMAGE</title>
     
 
 
@@ -377,7 +377,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">JavaScript中数组排序sort深入理解（Array.prototype.sort）</h2>
+          <h2 class="post-title" itemprop="name headline">【JavaScript】JavaScript中数组排序sort深入理解（Array.prototype.sort）</h2>
         
 
         <div class="post-meta">
@@ -439,7 +439,7 @@
 
           
           
-             <span id="/2018/11/arraysort.html" class="leancloud_visitors" data-flag-title="JavaScript中数组排序sort深入理解（Array.prototype.sort）">
+             <span id="/2018/11/arraysort.html" class="leancloud_visitors" data-flag-title="【JavaScript】JavaScript中数组排序sort深入理解（Array.prototype.sort）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -465,7 +465,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  642
+                  644
                 </span>
               
 
@@ -508,7 +508,13 @@
       
         <p>带着问题，打开了ECMA官方规范</p>
 <blockquote>
-<p><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-array.prototype.sort" target="_blank" rel="noopener">ECMA 2015</a><br><a href="http://www.ecma-international.org/ecma-262/7.0/#sec-array.prototype.sort" target="_blank" rel="noopener">ECMA 2016</a><br><a href="https://tc39.github.io/ecma262/#sec-array.prototype.sort" target="_blank" rel="noopener">ECMA 2017</a>  </p>
+<p><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-array.prototype.sort" target="_blank" rel="noopener">ECMA 2015</a>  </p>
+</blockquote>
+<blockquote>
+<p><a href="http://www.ecma-international.org/ecma-262/7.0/#sec-array.prototype.sort" target="_blank" rel="noopener">ECMA 2016</a>  </p>
+</blockquote>
+<blockquote>
+<p><a href="https://tc39.github.io/ecma262/#sec-array.prototype.sort" target="_blank" rel="noopener">ECMA 2017</a>  </p>
 </blockquote>
 <p>规范中并没有写明具体使用的排序算法，只是说了JavaScript的sort方法（Array.prototype.sort）并不一定稳定！</p>
 <h2 id="Google-Chrome浏览器"><a href="#Google-Chrome浏览器" class="headerlink" title="Google Chrome浏览器"></a>Google Chrome浏览器</h2><p>Google的Chrome浏览器的JavaScript引擎是：V8。  </p>
@@ -563,7 +569,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://caomage.com/2018/11/arraysort.html" title="JavaScript中数组排序sort深入理解（Array.prototype.sort）">http://caomage.com/2018/11/arraysort.html</a>
+    <a href="http://caomage.com/2018/11/arraysort.html" title="【JavaScript】JavaScript中数组排序sort深入理解（Array.prototype.sort）">http://caomage.com/2018/11/arraysort.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -618,8 +624,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/lovestory.html" rel="next" title="他真的很喜欢你">
-                <i class="fa fa-chevron-left"></i> 他真的很喜欢你
+              <a href="/2018/11/lovestory.html" rel="next" title="【杂谈】他真的很喜欢你">
+                <i class="fa fa-chevron-left"></i> 【杂谈】他真的很喜欢你
               </a>
             
           </div>
@@ -719,7 +725,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
