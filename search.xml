@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[JavaScript中数组排序sort深入理解（Array.prototype.sort）]]></title>
+    <url>%2F2018%2F11%2Farraysort.html</url>
+    <content type="text"><![CDATA[带着问题，打开了ECMA官方规范 ECMA 2015ECMA 2016ECMA 2017 规范中并没有写明具体使用的排序算法，只是说了JavaScript的sort方法（Array.prototype.sort）并不一定稳定！ Google Chrome浏览器Google的Chrome浏览器的JavaScript引擎是：V8。 既然ECMA没有规定具体的排序算法，那具体实施应该是各个JavaScript引擎决定了。于是打开Chrome V8引擎的官方源码，V8引擎github源码。 第239行到254行： code： 123456789101112131415function InnerArraySort(array, length, comparefn) &#123; // In-place QuickSort algorithm. // For short (length &lt;= 10) arrays, insertion sort is used for efficiency. if (!IS_CALLABLE(comparefn)) &#123; comparefn = function (x, y) &#123; if (x === y) return 0; if (%_IsSmi(x) &amp;&amp; %_IsSmi(y)) &#123; return %SmiLexicographicCompare(x, y); &#125; x = TO_STRING(x); y = TO_STRING(y); if (x == y) return 0; else return x &lt; y ? -1 : 1; &#125;;&#125; 代码中的注释明确写着：这个地方使用快速排序，但是当长度小于11的数组，使用的是插入排序。这也符合我们的正常观点，因为插入排序在数组长度小于一定值的时候是会比快速排序速度更快，快速排序在大规模数据的时候更有优势。插入排序是稳定的，快速排序是不稳定的。 知道了Chrome浏览器的排序算法。其他浏览器是不是也是这样呢？我们接着看。 Mozilla Firefox浏览器Mozilla的Firefox浏览器的JavaScript引擎是：SpiderMonkey。 然后同样的方法，我们直接去看源码。源码地址 第2306行的注释： code： 123456/* * We need a temporary array of 2 * len Value to hold the array elements * and the scratch space for merge sort. Check that its size does not * overflow size_t, which would allow for indexing beyond the end of the * malloc'd vector. */ Mozilla的Firefox浏览器使用的是归并排序，归并排序是稳定的。 Safari浏览器Safari浏览器的JavaScript引擎是：Nitro（JavaScriptCore ）。 源码地址 第579行开始是这样写的： code： 123456789101112function comparatorSort(array, length, comparator)&#123; let valueCount = compact(array, length); mergeSort(array, valueCount, comparator); // 归并排序&#125;function stringSort(array, length)&#123; let valueCount = compact(array, length); let strings = @newArrayWithSize(valueCount); for (let i = 0; i &lt; valueCount; ++i) strings[i] = &#123; string: @toString(array[i]), value: array[i] &#125;; bucketSort(array, 0, strings, 0); // 桶排序&#125; Safari浏览器使用的是桶排序和归并排序，如果参数中含有comparator函数就使用归并排序，没有的话就使用桶排序。桶排序的稳定性不确定，归并排序是稳定的。 Microsoft Edge和IE浏览器最后再来看看我们最难伺候的老大哥，老大哥浏览器的JavaScript引擎是：Chakra。 源码地址 老大哥浏览器使用的是不稳定的快速排序。]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>JavaScript</tag>
+        <tag>排序算法</tag>
+        <tag>快速排序</tag>
+        <tag>归并排序</tag>
+        <tag>桶排序</tag>
+        <tag>插入排序</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[他真的很喜欢你]]></title>
     <url>%2F2018%2F11%2Flovestory.html</url>
     <content type="text"><![CDATA[他真的很喜欢你，像风走了八千里 风飘过撒哈拉沙漠，飘过大海，飘到牧羊人所在的破庙，牧羊人已经得到了他的宝藏，牧羊人回忆着过去的的点点滴滴。他感受着这来自地中海的风，风里面夹杂着沙漠的味道，更重要的是，风里面有女孩对他的思念，有她的吻。 他真的很喜欢你，像阵雨下到了南极 飞机坠落在南极。绝望，希望，汗津津的生命。饥饿，寒冷，静悄悄的小站。生死，命运，疯癫癫的奔走。不离，不弃，傻乎乎的希望。他有一颗从未放弃的心，而她有对南极的了解，虽然她腿断了，但是，她有他，他有她。 他真的很喜欢你，像珊瑚沉在海底 他是自由潜水世界冠军，她是生物学大学生，他们相识于圣卢卡斯角。冲击170米记录时她被自己热爱的大海带走了，一周年以后，他到达曾带走她的170米深处，又一次打破记录。不断突破记录的功利成为了谋杀美丽生命的凶手。一半美人鱼一半天使的她，葬身于深爱的大海，可能也是她理想的归宿。 他真的很喜欢你，不问归期不远万里 她像雅各等拉结，等候了您七年。我只能模糊地回忆起那段历史，但我知道雅各七年之后得到的不是意中人。利亚, 哈特迈尔说。然后他得再次等上七年。我不明白他想说什么。她是否等候了您一年或者七年，十四年，没有区别。 他真的很喜欢你，像盲人看一出哑剧 对面走过来一个人，你撞上去了，那是爱情；对面开过来一辆车，你撞上去了，是车祸。但是呢，车和车总是撞，人和人总是让。爱真好，比浑身长满了眼睛都好。 他真的很喜欢你，像第一首诗不尽人意 她收到他为她写的诗：我是天空里的一片云，偶尔投影在你的波心。你不必讶异，更无须欢喜。在转瞬间消灭了踪影。你我相逢在黑夜的海上，你有你的，我有我的，方向；你记得也好，最好你忘掉，在这交会时互放的光亮！ 他真的很喜欢你，像太阳自转无论朝夕 他和她的爱情，跨越半个多世纪，穷尽了所有爱情的可能性：忠贞的、隐秘的、粗暴的、羞怯的、柏拉图式的、放荡的、转瞬即逝的、生死相依的…… 爱情，首先是一种本能，“要么生下来就会，要么永远都不会”。 他真的很喜欢你，千言万语乐此不疲 “最最喜欢你，绿子。” “什么程度？” “像喜欢春天的熊一样。” “春天的熊？”绿子再次扬起脸，“什么春天的熊？” “春天的原野里，你一个人正走着，对面走来一只可爱的小熊，浑身的毛活像天鹅绒，眼睛圆鼓鼓的。它这么对你说到：‘你好，小姐，和我一块打滚玩好么？’接着，你就和小熊抱在一起，顺着长满三叶草的山坡咕噜咕噜滚下去，整整玩了一大天。你说棒不棒？” “太棒了。” “我就这么喜欢你。” 他真的很喜欢你，像春雨下得淅淅沥沥 你以为我会无足轻重的留在这里吗？你以为我是一架没有感情的机器人吗？你以为我贫穷、低微、不美、缈小，我就没有灵魂，没有心吗？你想错了，我和你有一样多的灵魂，一样充实的心。如果上帝赐予我一点美，许多钱，我就要你难以离开我，就像我现在难以离开你一样。我现在不是以社会生活和习俗的准则和你说话，而是我的心灵同你的心灵讲话。 他真的很喜欢你，像夏日聒噪的蝉鸣 当你喜欢我的时候，我不喜欢你；当你爱上我的时候，我喜欢上你；当你离开我的时候，我却爱上你；是你走的太快，还是我跟不上你的脚步；我们错过了诺亚方舟，错过了泰坦尼克号；错过了一切的惊险与不惊险。我们还要继续错过，我不了解我的寂寞来自何方，但我真的感到寂寞，你也寂寞，世界上每个人都寂寞，只是大家的寂寞都不同。 他真的很想念你，像秋叶落得悄无声息 我把我整个灵魂都给你，连同它的怪癖，耍小脾气，忽明忽暗，一千八百种坏毛病。它真讨厌，只有一点好，爱你。 他真的很喜欢你，想冬天的雪沁在心里 将感情埋藏得太深有时是件坏事。如果一个女人掩饰了对自己所爱的男子的感情，她也许就失去了得到他的机会。骄傲多半不外乎我们对我们自己的估价，虚荣却牵涉到我们希望别人对我们的看法。 他真的很喜欢你，像狗本性难移 像他那样的人，经常眺望远方。 那双眼睛总是清澈的，是我迄今为止见过的最漂亮的眼睛。 可能是因为我喜欢他，才这样觉得吧。 他真的很喜欢你，所以他可以一直没脸没皮 她从小就爱恋他，明知他风流、不负责任，依然深爱他，长大后接近他，三次欢愉，有了他的孩子。然后默默离开，不想叫他不开心。只要你叫我，就算我在坟墓里，也会涌出一股力量跟你走。 他真的很喜欢你，所以他把你捧在手心 死生契阔——与子相悦，执子之手，与子偕老是一首最悲哀的诗……生与死与离别，都是大事，不由我们支配的。比起外界的力量，我们人是多么小，多么小！可是我们偏要说：‘我永远和你在一起，我们一生一世都别离开’。——好象我们自己做得了主似的。 他真的很喜欢你，所以固执地排比比喻 情不知所起，一往而深，生者可以死，死者可以生。生而不可与死，死而不可复生者，皆非情之至也。 他真的很喜欢你，虽然他的感情实在细腻 她让徐志摩怀想了一生，让梁思成宠爱了一生，让金岳霖默默记挂了一生。有多少繁花满枝，就会有多少秋叶零落。停留是刹那，转身即天涯。 他真的很喜欢你，不想浪费时间的一点一滴 每想你一次，天上飘落一粒沙，从此形成了撒哈拉。她想去沙漠，他已经提前去了，他们没有浪费一秒在沙漠中的日子。飞蛾扑火时，一定是极快乐幸福的。]]></content>
@@ -8,8 +25,8 @@
         <category>杂谈</category>
       </categories>
       <tags>
-        <tag>爱情</tag>
         <tag>杂谈</tag>
+        <tag>爱情</tag>
         <tag>书籍</tag>
         <tag>阅读</tag>
       </tags>
@@ -22,8 +39,8 @@
         <category>杂谈</category>
       </categories>
       <tags>
-        <tag>爱情</tag>
         <tag>杂谈</tag>
+        <tag>爱情</tag>
       </tags>
   </entry>
   <entry>
@@ -34,8 +51,8 @@
         <category>杂谈</category>
       </categories>
       <tags>
-        <tag>爱情</tag>
         <tag>杂谈</tag>
+        <tag>爱情</tag>
         <tag>读书</tag>
       </tags>
   </entry>

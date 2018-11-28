@@ -113,7 +113,7 @@
 
 
 
-  <meta name="keywords" content="js-excel">
+  <meta name="keywords" content="JavaScript,算法,排序算法,快速排序,归并排序,桶排序,插入排序">
 
 
 
@@ -124,28 +124,18 @@
 
 
 
-<meta name="description" content="使用js对在网页中打开Excel表格，并进行自动求和操作。">
-<meta name="keywords" content="js-excel">
+<meta name="description" content="最近在看算法书的时候看到C++中的sort方法，书中介绍是使用的快速排序。于是想起来自己天天都在写的JavaScript中的sort排序，它使用的是什么排序算法呢？各个浏览器使用的是同一种排序算法吗？">
+<meta name="keywords" content="JavaScript,算法,排序算法,快速排序,归并排序,桶排序,插入排序">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js操作Excel表格">
-<meta property="og:url" content="http://caomage.com/2018/09/jsexcel.html">
+<meta property="og:title" content="JavaScript中数组排序sort深入理解（Array.prototype.sort）">
+<meta property="og:url" content="http://caomage.com/2018/11/arraysort.html">
 <meta property="og:site_name" content="CAOMAGE">
-<meta property="og:description" content="使用js对在网页中打开Excel表格，并进行自动求和操作。">
+<meta property="og:description" content="最近在看算法书的时候看到C++中的sort方法，书中介绍是使用的快速排序。于是想起来自己天天都在写的JavaScript中的sort排序，它使用的是什么排序算法呢？各个浏览器使用的是同一种排序算法吗？">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://i.imgur.com/fkyEUwH.png">
-<meta property="og:image" content="https://i.imgur.com/HXxvb6Y.png">
-<meta property="og:image" content="https://i.imgur.com/J5ZFSZQ.png">
-<meta property="og:image" content="https://i.imgur.com/u4N1Waz.png">
-<meta property="og:image" content="https://i.imgur.com/gDb5xxG.png">
-<meta property="og:image" content="https://i.imgur.com/C5Nt0dk.png">
-<meta property="og:image" content="https://i.imgur.com/3Yk3XiE.png">
-<meta property="og:image" content="https://i.imgur.com/Fv9lNaJ.png">
-<meta property="og:image" content="https://i.imgur.com/jcdudLQ.png">
-<meta property="og:updated_time" content="2018-11-25T02:04:27.965Z">
+<meta property="og:updated_time" content="2018-11-28T04:42:49.214Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js操作Excel表格">
-<meta name="twitter:description" content="使用js对在网页中打开Excel表格，并进行自动求和操作。">
-<meta name="twitter:image" content="https://i.imgur.com/fkyEUwH.png">
+<meta name="twitter:title" content="JavaScript中数组排序sort深入理解（Array.prototype.sort）">
+<meta name="twitter:description" content="最近在看算法书的时候看到C++中的sort方法，书中介绍是使用的快速排序。于是想起来自己天天都在写的JavaScript中的sort排序，它使用的是什么排序算法呢？各个浏览器使用的是同一种排序算法吗？">
 
 
 
@@ -175,13 +165,13 @@
 
 
 
-  <link rel="canonical" href="http://caomage.com/2018/09/jsexcel.html">
+  <link rel="canonical" href="http://caomage.com/2018/11/arraysort.html">
 
 
 
 
 
-    <title>js操作Excel表格 | CAOMAGE</title>
+    <title>JavaScript中数组排序sort深入理解（Array.prototype.sort） | CAOMAGE</title>
     
 
 
@@ -370,7 +360,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://caomage.com/2018/09/jsexcel.html">
+    <link itemprop="mainEntityOfPage" href="http://caomage.com/2018/11/arraysort.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="caomage">
@@ -387,7 +377,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">js操作Excel表格</h2>
+          <h2 class="post-title" itemprop="name headline">JavaScript中数组排序sort深入理解（Array.prototype.sort）</h2>
         
 
         <div class="post-meta">
@@ -399,8 +389,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-25T22:29:49+08:00">
-                2018-09-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-28T12:36:08+08:00">
+                2018-11-28
               </time>
             
 
@@ -440,8 +430,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/09/jsexcel.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/jsexcel.html" itemprop="commentCount"></span>
+                <a href="/2018/11/arraysort.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/11/arraysort.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -449,7 +439,7 @@
 
           
           
-             <span id="/2018/09/jsexcel.html" class="leancloud_visitors" data-flag-title="js操作Excel表格">
+             <span id="/2018/11/arraysort.html" class="leancloud_visitors" data-flag-title="JavaScript中数组排序sort深入理解（Array.prototype.sort）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -475,7 +465,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  160
+                  642
                 </span>
               
 
@@ -491,7 +481,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -499,7 +489,7 @@
 
           
               <div class="post-description">
-                  使用js对在网页中打开Excel表格，并进行自动求和操作。
+                  最近在看算法书的时候看到C++中的sort方法，书中介绍是使用的快速排序。于是想起来自己天天都在写的JavaScript中的sort排序，它使用的是什么排序算法呢？各个浏览器使用的是同一种排序算法吗？
               </div>
           
 
@@ -516,41 +506,33 @@
       
 
       
-        <h2 id="js-Excel"><a href="#js-Excel" class="headerlink" title="js-Excel"></a>js-Excel</h2><p>Js is used to operate Excel tables and realize automatic summation.</p>
-<p>使用js对在网页中打开Excel表格，并进行自动求和操作。</p>
-<h3 id="使用的插件：js-xlsx"><a href="#使用的插件：js-xlsx" class="headerlink" title="使用的插件：js-xlsx"></a>使用的插件：<code>js-xlsx</code></h3><h3 id="代码地址：https-github-com-usecodelee-js-Excel"><a href="#代码地址：https-github-com-usecodelee-js-Excel" class="headerlink" title="代码地址：https://github.com/usecodelee/js-Excel"></a>代码地址：<code>https://github.com/usecodelee/js-Excel</code></h3><h3 id="兼容性如图："><a href="#兼容性如图：" class="headerlink" title="兼容性如图："></a>兼容性如图：</h3><p><img src="https://i.imgur.com/fkyEUwH.png" alt=""></p>
-<h2 id="操作演示："><a href="#操作演示：" class="headerlink" title="操作演示："></a>操作演示：</h2><ol>
-<li><strong>初始页面：</strong></li>
-</ol>
-<p><img src="https://i.imgur.com/HXxvb6Y.png" alt=""></p>
-<ol start="2">
-<li><strong>打开Excel表格（可以点击选择文件，也可以直接将文件拖动到输入框）</strong></li>
-</ol>
-<p><img src="https://i.imgur.com/J5ZFSZQ.png" alt=""></p>
-<ol start="3">
-<li><strong>可以看见行数列数等信息</strong></li>
-</ol>
-<p><img src="https://i.imgur.com/u4N1Waz.png" alt=""></p>
-<ol start="4">
-<li><strong>输入需要求和的列名，得出求和结果</strong></li>
-</ol>
-<p><img src="https://i.imgur.com/gDb5xxG.png" alt=""></p>
-<ol start="5">
-<li><strong>如果表格中含有非数字</strong></li>
-</ol>
-<p><img src="https://i.imgur.com/C5Nt0dk.png" alt=""></p>
-<ol start="6">
-<li><strong>如果有非数字会提示</strong></li>
-</ol>
-<p><img src="https://i.imgur.com/3Yk3XiE.png" alt=""></p>
-<ol start="7">
-<li><strong>然后也能计算出来去除非数字后的正确结果</strong></li>
-</ol>
-<p><img src="https://i.imgur.com/Fv9lNaJ.png" alt=""></p>
-<ol start="8">
-<li><strong>原始的Excel表格</strong></li>
-</ol>
-<p><img src="https://i.imgur.com/jcdudLQ.png" alt=""></p>
+        <p>带着问题，打开了ECMA官方规范</p>
+<blockquote>
+<p><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-array.prototype.sort" target="_blank" rel="noopener">ECMA 2015</a><br><a href="http://www.ecma-international.org/ecma-262/7.0/#sec-array.prototype.sort" target="_blank" rel="noopener">ECMA 2016</a><br><a href="https://tc39.github.io/ecma262/#sec-array.prototype.sort" target="_blank" rel="noopener">ECMA 2017</a>  </p>
+</blockquote>
+<p>规范中并没有写明具体使用的排序算法，只是说了JavaScript的sort方法（Array.prototype.sort）并不一定稳定！</p>
+<h2 id="Google-Chrome浏览器"><a href="#Google-Chrome浏览器" class="headerlink" title="Google Chrome浏览器"></a>Google Chrome浏览器</h2><p>Google的Chrome浏览器的JavaScript引擎是：V8。  </p>
+<p>既然ECMA没有规定具体的排序算法，那具体实施应该是各个JavaScript引擎决定了。于是打开Chrome V8引擎的官方源码，<a href="https://github.com/v8/v8/blob/master/src/js/array.js#L768" target="_blank" rel="noopener">V8引擎github源码</a>。</p>
+<p>第239行到254行：  </p>
+<p><strong><em>code：</em></strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">InnerArraySort</span>(<span class="params">array, length, comparefn</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// In-place QuickSort algorithm.</span></span><br><span class="line">  <span class="comment">// For short (length &lt;= 10) arrays, insertion sort is used for efficiency.</span></span><br><span class="line">  <span class="keyword">if</span> (!IS_CALLABLE(comparefn)) &#123;</span><br><span class="line">    comparefn = <span class="function"><span class="keyword">function</span> (<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (x === y) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">      <span class="keyword">if</span> (%_IsSmi(x) &amp;&amp; %_IsSmi(y)) &#123;</span><br><span class="line">        <span class="keyword">return</span> %SmiLexicographicCompare(x, y);</span><br><span class="line">      &#125;</span><br><span class="line">      x = TO_STRING(x);</span><br><span class="line">      y = TO_STRING(y);</span><br><span class="line">      <span class="keyword">if</span> (x == y) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">      <span class="keyword">else</span> <span class="keyword">return</span> x &lt; y ? <span class="number">-1</span> : <span class="number">1</span>;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>代码中的注释明确写着：这个地方使用快速排序，但是当长度小于11的数组，使用的是插入排序。这也符合我们的正常观点，因为插入排序在数组长度小于一定值的时候是会比快速排序速度更快，快速排序在大规模数据的时候更有优势。插入排序是稳定的，快速排序是不稳定的。  </p>
+<p>知道了Chrome浏览器的排序算法。其他浏览器是不是也是这样呢？我们接着看。</p>
+<h2 id="Mozilla-Firefox浏览器"><a href="#Mozilla-Firefox浏览器" class="headerlink" title="Mozilla Firefox浏览器"></a>Mozilla Firefox浏览器</h2><p>Mozilla的Firefox浏览器的JavaScript引擎是：SpiderMonkey。  </p>
+<p>然后同样的方法，我们直接去看源码。<a href="https://github.com/mozilla/gecko-dev/blob/master/js/src/builtin/Array.cpp" target="_blank" rel="noopener">源码地址</a></p>
+<p>第2306行的注释：</p>
+<p><strong><em>code：</em></strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    * We need a temporary array of 2 * len Value to hold the array elements</span></span><br><span class="line"><span class="comment">    * and the scratch space for merge sort. Check that its size does not</span></span><br><span class="line"><span class="comment">    * overflow size_t, which would allow for indexing beyond the end of the</span></span><br><span class="line"><span class="comment">    * malloc'd vector.</span></span><br><span class="line"><span class="comment">    */</span></span><br></pre></td></tr></table></figure>
+<p>Mozilla的Firefox浏览器使用的是归并排序，归并排序是稳定的。</p>
+<h2 id="Safari浏览器"><a href="#Safari浏览器" class="headerlink" title="Safari浏览器"></a>Safari浏览器</h2><p>Safari浏览器的JavaScript引擎是：Nitro（JavaScriptCore ）。  </p>
+<p><a href="https://github.com/WebKit/webkit/blob/master/Source/JavaScriptCore/builtins/ArrayPrototype.js#L579" target="_blank" rel="noopener">源码地址</a>  </p>
+<p>第579行开始是这样写的：</p>
+<p><strong><em>code：</em></strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">comparatorSort</span>(<span class="params">array, length, comparator</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> valueCount = compact(array, length);</span><br><span class="line">    mergeSort(array, valueCount, comparator); <span class="comment">// 归并排序</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">stringSort</span>(<span class="params">array, length</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> valueCount = compact(array, length);</span><br><span class="line">    <span class="keyword">let</span> strings = @newArrayWithSize(valueCount);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; valueCount; ++i)</span><br><span class="line">        strings[i] = &#123; <span class="attr">string</span>: @toString(array[i]), <span class="attr">value</span>: array[i] &#125;;</span><br><span class="line">    bucketSort(array, <span class="number">0</span>, strings, <span class="number">0</span>); <span class="comment">// 桶排序</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Safari浏览器使用的是桶排序和归并排序，如果参数中含有comparator函数就使用归并排序，没有的话就使用桶排序。桶排序的稳定性不确定，归并排序是稳定的。</p>
+<h2 id="Microsoft-Edge和IE浏览器"><a href="#Microsoft-Edge和IE浏览器" class="headerlink" title="Microsoft Edge和IE浏览器"></a>Microsoft Edge和IE浏览器</h2><p>最后再来看看我们最难伺候的老大哥，老大哥浏览器的JavaScript引擎是：Chakra。  </p>
+<p><a href="https://github.com/Microsoft/ChakraCore/blob/master/lib/Common/DataStructures/QuickSort.h" target="_blank" rel="noopener">源码地址</a>  </p>
+<p>老大哥浏览器使用的是不稳定的快速排序。</p>
 
       
     </div>
@@ -581,7 +563,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://caomage.com/2018/09/jsexcel.html" title="js操作Excel表格">http://caomage.com/2018/09/jsexcel.html</a>
+    <a href="http://caomage.com/2018/11/arraysort.html" title="JavaScript中数组排序sort深入理解（Array.prototype.sort）">http://caomage.com/2018/11/arraysort.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -596,7 +578,19 @@
       
         <div class="post-tags">
           
+            <a href="/tags/算法/" rel="tag"><i class="fa fa-tag"></i> 算法</a>
+          
             <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
+          
+            <a href="/tags/排序算法/" rel="tag"><i class="fa fa-tag"></i> 排序算法</a>
+          
+            <a href="/tags/快速排序/" rel="tag"><i class="fa fa-tag"></i> 快速排序</a>
+          
+            <a href="/tags/归并排序/" rel="tag"><i class="fa fa-tag"></i> 归并排序</a>
+          
+            <a href="/tags/桶排序/" rel="tag"><i class="fa fa-tag"></i> 桶排序</a>
+          
+            <a href="/tags/插入排序/" rel="tag"><i class="fa fa-tag"></i> 插入排序</a>
           
         </div>
       
@@ -624,8 +618,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/fibonacci.html" rel="next" title="JavaScript实现斐波那契数列">
-                <i class="fa fa-chevron-left"></i> JavaScript实现斐波那契数列
+              <a href="/2018/11/lovestory.html" rel="next" title="他真的很喜欢你">
+                <i class="fa fa-chevron-left"></i> 他真的很喜欢你
               </a>
             
           </div>
@@ -633,10 +627,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/3.html" rel="prev" title="手机H5页面">
-                手机H5页面 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -841,7 +831,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#js-Excel"><span class="nav-number">1.</span> <span class="nav-text">js-Excel</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用的插件：js-xlsx"><span class="nav-number">1.1.</span> <span class="nav-text">使用的插件：js-xlsx</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码地址：https-github-com-usecodelee-js-Excel"><span class="nav-number">1.2.</span> <span class="nav-text">代码地址：https://github.com/usecodelee/js-Excel</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#兼容性如图："><span class="nav-number">1.3.</span> <span class="nav-text">兼容性如图：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作演示："><span class="nav-number">2.</span> <span class="nav-text">操作演示：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Google-Chrome浏览器"><span class="nav-number">1.</span> <span class="nav-text">Google Chrome浏览器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mozilla-Firefox浏览器"><span class="nav-number">2.</span> <span class="nav-text">Mozilla Firefox浏览器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Safari浏览器"><span class="nav-number">3.</span> <span class="nav-text">Safari浏览器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Microsoft-Edge和IE浏览器"><span class="nav-number">4.</span> <span class="nav-text">Microsoft Edge和IE浏览器</span></a></li></ol></div>
             
 
           </div>
