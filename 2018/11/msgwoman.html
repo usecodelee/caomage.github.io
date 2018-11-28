@@ -183,18 +183,96 @@
 
 
 
-   
+
 </head>
 
 <body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+    <canvas style="position:fixed;z-index:-1;"></canvas>
+    <script>
+        document.onselectstart = function() {
+            return false;
+        };
+        document.addEventListener('touchmove', function(e) {
+            e.preventDefault()
+        })
+        var c = document.getElementsByTagName('canvas')[0],
+            x = c.getContext('2d'),
+            pr = window.devicePixelRatio || 1,
+            w = window.innerWidth,
+            h = window.innerHeight,
+            f = 150,
+            q,
+            m = Math,
+            r = 0,
+            u = m.PI * 2,
+            v = m.cos,
+            z = m.random
+        c.width = w * pr
+        c.height = h * pr
+        x.scale(pr, pr)
+        x.globalAlpha = 0.6
 
+        function i() {
+            x.clearRect(0, 0, w, h)
+            q = [{
+                x: 0,
+                y: h * .7 + f
+            }, {
+                x: 0,
+                y: h * .7 - f
+            }]
+            while (q[1].x < w + f) d(q[0], q[1])
+        }
 
+        function d(i, j) {
+            x.beginPath()
+            x.moveTo(i.x, i.y)
+            x.lineTo(j.x, j.y)
+            var k = j.x + (z() * 2 - 0.25) * f,
+                n = y(j.y)
+            x.lineTo(k, n)
+            x.closePath()
+            r -= u / -50
+            x.fillStyle = '#' + (v(r) * 127 + 128 << 16 | v(r + u / 3) * 127 + 128 << 8 | v(r + u / 3 * 2) * 127 + 128).toString(16)
+            x.fill()
+            q[0] = q[1]
+            q[1] = {
+                x: k,
+                y: n
+            }
+        }
 
-       
+        function y(p) {
+            var t = p + (z() * 2 - 1.1) * f
+            return (t > h || t < 0) ? y(p) : t
+        }
+
+        function getScrollTop() {
+            var scrollTop = 0;
+            if (document.documentElement && document.documentElement.scrollTop) {
+                scrollTop = document.documentElement.scrollTop;
+            } else if (document.body) {
+                scrollTop = document.body.scrollTop;
+            }
+            return scrollTop;
+        }
+        document.onclick = i
+        document.onscroll = function() {
+            var height111 = getScrollTop();
+            if (height111 % 10 == 0) {
+                i();
+            }
+
+        };
+        document.ontouchstart = i
+        i()
+    </script>
+
+        
 
     <div class="container sidebar-position-left page-post-detail">
         <div class="headband"></div>
-       
+
         <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
             <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
@@ -510,7 +588,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/images/postimg/anlian2.jpg" rel="gallery_cjp0pgy7b0016ts2l64prbak0" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/images/postimg/anlian2.jpg" rel="gallery_cjp0wbdjo0013jc2lyqeqoe5v" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/images/postimg/anlian2.jpg" itemprop="contentUrl">
               </a>
             
@@ -574,9 +652,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/爱情/" rel="tag"><i class="fa fa-tag"></i> 爱情</a>
-          
             <a href="/tags/杂谈/" rel="tag"><i class="fa fa-tag"></i> 杂谈</a>
+          
+            <a href="/tags/爱情/" rel="tag"><i class="fa fa-tag"></i> 爱情</a>
           
         </div>
       
@@ -889,9 +967,6 @@ show_date_time();
 
 
 
-  
-  
-
 
 
 
@@ -926,16 +1001,6 @@ show_date_time();
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/three.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/canvas_lines.min.js"></script>
   
 
  
@@ -1488,7 +1553,7 @@ show_date_time();
  
  
  
- 
+
 
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/haruto.model.json"},"display":{"position":"left","width":50,"height":100},"mobile":{"show":true},"log":false});</script></body>
 
