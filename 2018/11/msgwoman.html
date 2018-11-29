@@ -588,7 +588,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/images/postimg/anlian2.jpg" rel="gallery_cjp0wbdjo0013jc2lyqeqoe5v" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/images/postimg/anlian2.jpg" rel="gallery_cjp1xyws4001itw2lpt6nz217" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/images/postimg/anlian2.jpg" itemprop="contentUrl">
               </a>
             
@@ -652,9 +652,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/杂谈/" rel="tag"><i class="fa fa-tag"></i> 杂谈</a>
-          
             <a href="/tags/爱情/" rel="tag"><i class="fa fa-tag"></i> 爱情</a>
+          
+            <a href="/tags/杂谈/" rel="tag"><i class="fa fa-tag"></i> 杂谈</a>
           
         </div>
       
@@ -1066,17 +1066,17 @@ show_date_time();
   
   <script type="text/javascript">
     var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
+    var guest = 'nick,mail';
     guest = guest.split(',').filter(item=>{
       return GUEST.indexOf(item)>-1;
     });
     new Valine({
         el: '#comments' ,
         verify: false,
-        notify: false,
+        notify: true,
         appId: 'LdXbjmwLiXSyuBqhFznEUCV7-gzGzoHsz',
         appKey: 'NLB9BcNypXn12eKUJCoRU8VG',
-        placeholder: '说两句吧！（请在上面留下您的邮箱或链接地址）',
+        placeholder: '说两句吧！（请在上面留下您的邮箱地址，方便回复提醒您或联系到您。）',
         avatar:'mm',
         guest_info:guest,
         pageSize:'10' || 10,

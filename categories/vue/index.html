@@ -800,17 +800,17 @@ show_date_time();
   
   <script type="text/javascript">
     var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
+    var guest = 'nick,mail';
     guest = guest.split(',').filter(item=>{
       return GUEST.indexOf(item)>-1;
     });
     new Valine({
         el: '#comments' ,
         verify: false,
-        notify: false,
+        notify: true,
         appId: 'LdXbjmwLiXSyuBqhFznEUCV7-gzGzoHsz',
         appKey: 'NLB9BcNypXn12eKUJCoRU8VG',
-        placeholder: '说两句吧！（请在上面留下您的邮箱或链接地址）',
+        placeholder: '说两句吧！（请在上面留下您的邮箱地址，方便回复提醒您或联系到您。）',
         avatar:'mm',
         guest_info:guest,
         pageSize:'10' || 10,
