@@ -113,7 +113,7 @@
 
 
 
-  <meta name="keywords" content="top,文章阅读量排行榜">
+  <meta name="keywords" content="JavaScript,ES6,promise,ajax,node,http">
 
 
 
@@ -124,18 +124,20 @@
 
 
 
-<meta name="description" content="博客文章阅读量排行榜">
-<meta name="keywords" content="top,文章阅读量排行榜">
-<meta property="og:type" content="website">
-<meta property="og:title" content="阅读排行">
-<meta property="og:url" content="http://caomage.com/top/index.html">
+<meta name="description" content="最近在学习ES6的相关知识，看完了Promise，于是打算用Promise实现一个原生JS的Ajax例子，顺便复习一下Node的相关知识。">
+<meta name="keywords" content="JavaScript,ES6,promise,ajax,node,http">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Promise实现原生JS的Ajax请求（后端使用Node.js）">
+<meta property="og:url" content="http://caomage.com/2018/11/proajax.html">
 <meta property="og:site_name" content="CAOMAGE">
-<meta property="og:description" content="博客文章阅读量排行榜">
+<meta property="og:description" content="最近在学习ES6的相关知识，看完了Promise，于是打算用Promise实现一个原生JS的Ajax例子，顺便复习一下Node的相关知识。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-23T15:29:19.259Z">
+<meta property="og:image" content="https://i.loli.net/2018/11/30/5c00defbdf0d0.jpg">
+<meta property="og:updated_time" content="2018-11-30T07:20:09.458Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="阅读排行">
-<meta name="twitter:description" content="博客文章阅读量排行榜">
+<meta name="twitter:title" content="Promise实现原生JS的Ajax请求（后端使用Node.js）">
+<meta name="twitter:description" content="最近在学习ES6的相关知识，看完了Promise，于是打算用Promise实现一个原生JS的Ajax例子，顺便复习一下Node的相关知识。">
+<meta name="twitter:image" content="https://i.loli.net/2018/11/30/5c00defbdf0d0.jpg">
 
 
 
@@ -165,13 +167,13 @@
 
 
 
-  <link rel="canonical" href="http://caomage.com/top/">
+  <link rel="canonical" href="http://caomage.com/2018/11/proajax.html">
 
 
 
 
 
-    <title>阅读排行 | CAOMAGE</title>
+    <title>Promise实现原生JS的Ajax请求（后端使用Node.js） | CAOMAGE</title>
     
 
 
@@ -426,62 +428,316 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://caomage.com/2018/11/proajax.html">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="caomage">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/aut.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CAOMAGE">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h2 class="post-title" itemprop="name headline">阅读排行</h2>
-
-
-	<div class="post-meta">
-		<div class="post-description">博客文章阅读量排行榜</div>
-	</div>
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <p><div id="top"></div></p>
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script>AV.initialize("LdXbjmwLiXSyuBqhFznEUCV7-gzGzoHsz", "NLB9BcNypXn12eKUJCoRU8VG");</script>
-<script type="text/javascript">
-  var time=0
-  var title=""
-  var url=""
-  var query = new AV.Query('Counter');
-  query.notEqualTo('id',0);
-  query.descending('time');
-  query.limit(1000);
-  query.find().then(function (todo) {
-    for (var i=0;i<1000;i++){
-      var result=todo[i].attributes;
-      time=result.time;
-      title=result.title;
-      url=result.url;
-      var content="<font color='#555' class='topfont'>"+"【阅读次数：<span class='numberTop'>"+time+"</span>】</font>"+"<a href='"+"http://caomage.com"+url+"'>"+title+"</a><br /><br /><br />";
-      document.getElementById("top").innerHTML+=content
-    }
-  }, function (error) {
-    console.log("error");
-  });
-</script>
-
-<style>.post-description { display: none; }</style>
+          <h2 class="post-title" itemprop="name headline">Promise实现原生JS的Ajax请求（后端使用Node.js）</h2>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-30T15:17:59+08:00">
+                2018-11-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/ES6/" itemprop="url" rel="index">
+                    <span itemprop="name">ES6</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/proajax.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/11/proajax.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/11/proajax.html" class="leancloud_visitors" data-flag-title="Promise实现原生JS的Ajax请求（后端使用Node.js）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span>℃</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  705
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  最近在学习ES6的相关知识，看完了Promise，于是打算用Promise实现一个原生JS的Ajax例子，顺便复习一下Node的相关知识。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h2 id="说搞就搞，先写后端"><a href="#说搞就搞，先写后端" class="headerlink" title="说搞就搞，先写后端"></a>说搞就搞，先写后端</h2><h3 id="项目目录结构"><a href="#项目目录结构" class="headerlink" title="项目目录结构"></a>项目目录结构</h3><p>后端使用的是Express框架，具体步骤如下：  </p>
+<ul>
+<li><code>npm init</code></li>
+</ul>
+<blockquote>
+<p>初始化，这个就一直下一步就行了，需要注意的是项目文件夹名不能为中文。</p>
+</blockquote>
+<ul>
+<li><code>npm install express --save</code></li>
+</ul>
+<blockquote>
+<p>使用 <code>npm</code> 安装 <code>express</code>。</p>
+</blockquote>
+<ul>
+<li>此时的目录结构应该是这样的：<code>node_modules/  package.json  package-lock.json</code></li>
+<li>新建文件：<code>server.js</code>，和上面的文件同级。</li>
+<li>此时的目录结构是这样的：<code>node_modules/  package.json  package-lock.json  server.js</code></li>
+</ul>
+<h3 id="写server"><a href="#写server" class="headerlink" title="写server"></a>写server</h3><p>直接看代码：  </p>
+<p><strong><em>code：</em></strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line"><span class="keyword">const</span> bodyParser = <span class="built_in">require</span>(<span class="string">'body-parser'</span>);</span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> express();</span><br><span class="line"><span class="comment">// 创建 json 解析</span></span><br><span class="line">app.use(bodyParser.json());</span><br><span class="line"><span class="comment">// 创建 application/x-www-form-urlencoded 编码解析</span></span><br><span class="line">app.use(bodyParser.urlencoded(&#123; <span class="attr">extended</span>: <span class="literal">false</span> &#125;));</span><br><span class="line"></span><br><span class="line">app.use(express.static(<span class="string">'public'</span>));</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> server = app.listen(<span class="number">3000</span>, () =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> host = server.address().address;</span><br><span class="line">    <span class="keyword">const</span> port = server.address().port;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'app listening at http://%s:%s'</span>, host, port);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> data = [</span><br><span class="line">    &#123; <span class="attr">name</span>: <span class="string">'zhangsan'</span>, <span class="attr">age</span>: <span class="number">23</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">name</span>: <span class="string">'lisi'</span>, <span class="attr">age</span>: <span class="number">24</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">name</span>: <span class="string">'wangwu'</span>, <span class="attr">age</span>: <span class="number">26</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">name</span>: <span class="string">'zhaoliu'</span>, <span class="attr">age</span>: <span class="number">27</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">name</span>: <span class="string">'tianqi'</span>, <span class="attr">age</span>: <span class="number">29</span> &#125;</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">'/gettest'</span>, (req, res) =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(req.body);</span><br><span class="line">    res.status(<span class="number">200</span>),</span><br><span class="line">        res.json(data)</span><br><span class="line">&#125;);</span><br><span class="line">app.post(<span class="string">'/posttest'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(req.body);</span><br><span class="line">    res.status(<span class="number">200</span>),</span><br><span class="line">        res.json(data)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>在代码中写了两个处理请求的方法：  </p>
+<ul>
+<li><code>/gettest</code>：处理get请求</li>
+<li><code>/posttest</code>：处理post请求</li>
+</ul>
+<p>代码挺简单的，就不一一解释了。</p>
+<h3 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h3><blockquote>
+<p>执行：<code>node server.js</code>，启动服务<br>使用浏览器访问：<code>http://localhost:3000/</code></p>
+</blockquote>
+<p>此时可以看见页面中返回了在server中定义的<code>data</code>里面的数据：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">    &#123; <span class="attr">name</span>: <span class="string">'zhangsan'</span>, <span class="attr">age</span>: <span class="number">23</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">name</span>: <span class="string">'lisi'</span>, <span class="attr">age</span>: <span class="number">24</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">name</span>: <span class="string">'wangwu'</span>, <span class="attr">age</span>: <span class="number">26</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">name</span>: <span class="string">'zhaoliu'</span>, <span class="attr">age</span>: <span class="number">27</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">name</span>: <span class="string">'tianqi'</span>, <span class="attr">age</span>: <span class="number">29</span> &#125;</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+<p>后台搞定了，接下来是本文的重头戏，撸前端。</p>
+<h2 id="再来看看前端"><a href="#再来看看前端" class="headerlink" title="再来看看前端"></a>再来看看前端</h2><h3 id="新建前端页面index-html"><a href="#新建前端页面index-html" class="headerlink" title="新建前端页面index.html"></a>新建前端页面index.html</h3><p>因为后端指定了静态文件在<code>public</code>，于是我们新建<code>index.html</code>文件，放在<code>public</code>文件夹下。<code>public</code>文件夹和<code>server.js</code>同级。  </p>
+<p>此时的目录结构是这样的：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">│  package-lock.json</span><br><span class="line">│  package.json</span><br><span class="line">│  server.js</span><br><span class="line">│</span><br><span class="line">├─node_modules</span><br><span class="line">└─public</span><br><span class="line">        index.html</span><br></pre></td></tr></table></figure>
+<h3 id="开始撸"><a href="#开始撸" class="headerlink" title="开始撸"></a>开始撸</h3><p>在<code>index.html</code>中开始撸<code>Promise</code>  </p>
+<p><strong><em>code：</em></strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="keyword">const</span> myAjax = <span class="function"><span class="keyword">function</span>(<span class="params">data, url</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.log(data);</span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.log(url);</span></span><br><span class="line"><span class="javascript">            <span class="keyword">const</span> promise = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">const</span> stateChange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                    <span class="keyword">if</span> (<span class="keyword">this</span>.readyState !== <span class="number">4</span>) &#123;</span></span><br><span class="line"><span class="javascript">                        <span class="keyword">return</span>;</span></span><br><span class="line"><span class="undefined">                    &#125;</span></span><br><span class="line"><span class="javascript">                    <span class="keyword">if</span> (<span class="keyword">this</span>.status === <span class="number">200</span>) &#123;</span></span><br><span class="line"><span class="javascript">                        resolve(<span class="keyword">this</span>.response);</span></span><br><span class="line"><span class="javascript">                    &#125; <span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="javascript">                        reject(<span class="keyword">new</span> <span class="built_in">Error</span>(<span class="keyword">this</span>.statusText));</span></span><br><span class="line"><span class="undefined">                    &#125;</span></span><br><span class="line"><span class="undefined">                &#125;;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">const</span> myHttp = <span class="keyword">new</span> XMLHttpRequest();</span></span><br><span class="line"><span class="javascript">                myHttp.open(<span class="string">'POST'</span>, url, <span class="string">'true'</span>);</span></span><br><span class="line"><span class="undefined">                myHttp.onreadystatechange = stateChange;</span></span><br><span class="line"><span class="javascript">                myHttp.responseType = <span class="string">'json'</span>;</span></span><br><span class="line"><span class="javascript">                myHttp.setRequestHeader(<span class="string">'Content-Type'</span>, <span class="string">'application/json'</span>);</span></span><br><span class="line"><span class="javascript">                myHttp.send(<span class="built_in">JSON</span>.stringify(data));</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">            &#125;);</span></span><br><span class="line"><span class="javascript">            <span class="keyword">return</span> promise;</span></span><br><span class="line"><span class="undefined">        &#125;;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">let</span> data = &#123;</span></span><br><span class="line"><span class="javascript">            user: <span class="string">'root'</span></span></span><br><span class="line"><span class="undefined">        &#125;;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">let</span> url = <span class="string">'http://localhost:3000/posttest'</span>;</span></span><br><span class="line"><span class="javascript">        myAjax(data, url).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.log(res);</span></span><br><span class="line"><span class="javascript">        &#125;).catch(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.log(err);</span></span><br><span class="line"><span class="undefined">        &#125;);</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>此处是使用<code>Promise</code>写的<code>Ajax</code>的<code>POST</code>请求，<code>GET</code>请求就不写了。<code>Promise</code>还是挺好用的。</p>
+<h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><p><img src="https://i.loli.net/2018/11/30/5c00defbdf0d0.jpg" alt="最终结果"></p>
+
       
     </div>
     
     
     
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    caomage
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://caomage.com/2018/11/proajax.html" title="Promise实现原生JS的Ajax请求（后端使用Node.js）">http://caomage.com/2018/11/proajax.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
+          
+            <a href="/tags/ES6/" rel="tag"><i class="fa fa-tag"></i> ES6</a>
+          
+            <a href="/tags/promise/" rel="tag"><i class="fa fa-tag"></i> promise</a>
+          
+            <a href="/tags/ajax/" rel="tag"><i class="fa fa-tag"></i> ajax</a>
+          
+            <a href="/tags/node/" rel="tag"><i class="fa fa-tag"></i> node</a>
+          
+            <a href="/tags/http/" rel="tag"><i class="fa fa-tag"></i> http</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/arraysort.html" rel="next" title="【JavaScript】JavaScript中数组排序sort深入理解（Array.prototype.sort）">
+                <i class="fa fa-chevron-left"></i> 【JavaScript】JavaScript中数组排序sort深入理解（Array.prototype.sort）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -489,6 +745,15 @@
                     
 
  
+
+  
+    <div class="comments" id="comments">
+      <div id="SOHUCS"></div>
+    </div>
+
+  
+
+
 
                 </div>
                  
@@ -508,8 +773,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -639,6 +913,22 @@ show_date_time();
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#说搞就搞，先写后端"><span class="nav-number">1.</span> <span class="nav-text">说搞就搞，先写后端</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目目录结构"><span class="nav-number">1.1.</span> <span class="nav-text">项目目录结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#写server"><span class="nav-number">1.2.</span> <span class="nav-text">写server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动服务"><span class="nav-number">1.3.</span> <span class="nav-text">启动服务</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#再来看看前端"><span class="nav-number">2.</span> <span class="nav-text">再来看看前端</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#新建前端页面index-html"><span class="nav-number">2.1.</span> <span class="nav-text">新建前端页面index.html</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开始撸"><span class="nav-number">2.2.</span> <span class="nav-text">开始撸</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行结果"><span class="nav-number">3.</span> <span class="nav-text">运行结果</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
