@@ -113,7 +113,7 @@
 
 
 
-  <meta name="keywords" content="encryption,C#">
+  <meta name="keywords" content="cryptology,C#">
 
 
 
@@ -125,24 +125,24 @@
 
 
 <meta name="description" content="各种密码学算法的 C# GUI编程实现，包含：DES、AES、Present轻量级密码算法、扩展欧几里得算法、素性检测">
-<meta name="keywords" content="encryption,C#">
+<meta name="keywords" content="cryptology,C#">
 <meta property="og:type" content="article">
 <meta property="og:title" content="各种密码学算法的GUI编程实现（DES、AES、Present、扩展欧几里得算法、素性检测）">
 <meta property="og:url" content="http://caomage.com/2019/01/cryptology.html">
 <meta property="og:site_name" content="CAOMAGE">
 <meta property="og:description" content="各种密码学算法的 C# GUI编程实现，包含：DES、AES、Present轻量级密码算法、扩展欧几里得算法、素性检测">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190102093102418.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nhb21hZ2U=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190102093131528.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nhb21hZ2U=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190102093157888.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nhb21hZ2U=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190102093213766.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nhb21hZ2U=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190102093232827.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nhb21hZ2U=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190102093259250.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nhb21hZ2U=,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-01-02T04:28:35.770Z">
+<meta property="og:image" content="http://caomage.com/imgs/desjia.png">
+<meta property="og:image" content="http://caomage.com/imgs/desjian.png">
+<meta property="og:image" content="http://caomage.com/imgs/aes.png">
+<meta property="og:image" content="http://caomage.com/imgs/parent.png">
+<meta property="og:image" content="http://caomage.com/imgs/Euclidean.png">
+<meta property="og:image" content="http://caomage.com/imgs/Miller-Rabin.png">
+<meta property="og:updated_time" content="2019-01-02T04:44:15.477Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="各种密码学算法的GUI编程实现（DES、AES、Present、扩展欧几里得算法、素性检测）">
 <meta name="twitter:description" content="各种密码学算法的 C# GUI编程实现，包含：DES、AES、Present轻量级密码算法、扩展欧几里得算法、素性检测">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190102093102418.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nhb21hZ2U=,size_16,color_FFFFFF,t_70">
+<meta name="twitter:image" content="http://caomage.com/imgs/desjia.png">
 
 
 
@@ -477,8 +477,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/encryption/" itemprop="url" rel="index">
-                    <span itemprop="name">encryption</span>
+                  <a href="/categories/cryptology/" itemprop="url" rel="index">
+                    <span itemprop="name">cryptology</span>
                   </a>
                 </span>
 
@@ -488,7 +488,7 @@
                 
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/encryption/C/" itemprop="url" rel="index">
+                  <a href="/categories/cryptology/C/" itemprop="url" rel="index">
                     <span itemprop="name">C#</span>
                   </a>
                 </span>
@@ -593,27 +593,27 @@
 <h2 id="最终的结果"><a href="#最终的结果" class="headerlink" title="最终的结果"></a>最终的结果</h2><blockquote>
 <p><strong>DES加密</strong>  </p>
 </blockquote>
-<p><img src="https://img-blog.csdnimg.cn/20190102093102418.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nhb21hZ2U=,size_16,color_FFFFFF,t_70" alt="DES加密"></p>
+<p><img src="../../imgs/desjia.png" alt="DES加密"></p>
 <blockquote>
 <p><strong>DES解密</strong>  </p>
 </blockquote>
-<p><img src="https://img-blog.csdnimg.cn/20190102093131528.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nhb21hZ2U=,size_16,color_FFFFFF,t_70" alt="DES解密"></p>
+<p><img src="../../imgs/desjian.png" alt="DES解密"></p>
 <blockquote>
 <p><strong>AES加解密</strong>  </p>
 </blockquote>
-<p><img src="https://img-blog.csdnimg.cn/20190102093157888.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nhb21hZ2U=,size_16,color_FFFFFF,t_70" alt="AES加解密"></p>
+<p><img src="../../imgs/aes.png" alt="AES加解密"></p>
 <blockquote>
 <p><strong>Present</strong>  </p>
 </blockquote>
-<p><img src="https://img-blog.csdnimg.cn/20190102093213766.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nhb21hZ2U=,size_16,color_FFFFFF,t_70" alt="Present"></p>
+<p><img src="../../imgs/parent.png" alt="Present"></p>
 <blockquote>
 <p><strong>扩展欧几里得算法</strong>  </p>
 </blockquote>
-<p><img src="https://img-blog.csdnimg.cn/20190102093232827.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nhb21hZ2U=,size_16,color_FFFFFF,t_70" alt="扩展欧几里得算法"></p>
+<p><img src="../../imgs/Euclidean.png" alt="扩展欧几里得算法"></p>
 <blockquote>
 <p><strong>素性检测</strong>  </p>
 </blockquote>
-<p><img src="https://img-blog.csdnimg.cn/20190102093259250.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nhb21hZ2U=,size_16,color_FFFFFF,t_70" alt="素性检测"></p>
+<p><img src="../../imgs/Miller-Rabin.png" alt="素性检测"></p>
 <h2 id="使用说明（输入输出）"><a href="#使用说明（输入输出）" class="headerlink" title="使用说明（输入输出）"></a>使用说明（输入输出）</h2><blockquote>
 <p>建议使用<code>visual studio 2015</code>打开此项目（解决方案）。</p>
 </blockquote>
@@ -740,7 +740,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/encryption/" rel="tag"><i class="fa fa-tag"></i> encryption</a>
+            <a href="/tags/cryptology/" rel="tag"><i class="fa fa-tag"></i> cryptology</a>
+          
+            <a href="/tags/C/" rel="tag"><i class="fa fa-tag"></i> C#</a>
           
         </div>
       
@@ -869,7 +871,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -880,7 +882,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
