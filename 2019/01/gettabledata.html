@@ -132,7 +132,7 @@
 <meta property="og:site_name" content="CAOMAGE">
 <meta property="og:description" content="实际开发过程中需要将前端以表格形式展示的数据保存为csv格式的文件，由于数据涉及到的种类比较多，格式化都是放在前端进行的，所以后端以接口下载的形式返回csv文件会比较麻烦，于是想着直接写个组件爬取页面中表格内的数据">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-10T10:49:58.034Z">
+<meta property="og:updated_time" content="2019-01-10T10:51:19.156Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue组件-爬取页面表格中的数据并保存为csv文件">
 <meta name="twitter:description" content="实际开发过程中需要将前端以表格形式展示的数据保存为csv格式的文件，由于数据涉及到的种类比较多，格式化都是放在前端进行的，所以后端以接口下载的形式返回csv文件会比较麻烦，于是想着直接写个组件爬取页面中表格内的数据">
@@ -534,7 +534,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  870
+                  875
                 </span>
               
 
@@ -581,22 +581,27 @@
 </blockquote>
 <h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>首先分析一下涉及到的知识点，其实涉及到的知识点也比较简单：  </p>
 <blockquote>
-<p>获取页面节点信息<br>获取页面数据<br>了解csv文件的格式要求<br>保存为csv文件并下载</p>
+<ol>
+<li>获取页面节点信息</li>
+<li>获取页面数据</li>
+<li>了解csv文件的格式要求</li>
+<li>保存为csv文件并下载</li>
+</ol>
 </blockquote>
 <ul>
-<li>获取页面节点信息</li>
+<li>1.获取页面节点信息</li>
 </ul>
 <p>首先是获取页面的节点规律，这点很简单，直接找到需要爬取的页面，打开开发者工具，使用element页面查看即可。获取节点规律即简单又重要，只有清晰的了解页面的结构才能更加直接快捷的获取数据。</p>
 <ul>
-<li>获取页面数据</li>
+<li>2.获取页面数据</li>
 </ul>
 <p>了解了页面的HTML结构之后我们就可以针对性的书写循环获取页面中的数据了。</p>
 <ul>
-<li>了解csv文件的格式要求</li>
+<li>3.了解csv文件的格式要求</li>
 </ul>
 <p>这里是要保存为csv格式的文件，所以需要先搞清楚csv文件的格式要求，csv文件是<strong>使用逗号区分列</strong>，<strong>使用‘\r\n’区分行</strong>。</p>
 <ul>
-<li>保存为csv文件并下载</li>
+<li>4.保存为csv文件并下载</li>
 </ul>
 <p>了解了csv文件的格式要求之后之后我们就可以直接保存了，这里下载的话可以将数据先拼接成字符串，然后再使用Blob，最后动态生成a标签的方式进行。不了解Blob？猛戳<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Blob" target="_blank" rel="noopener">这里</a>。  </p>
 <p>注意事项：  </p>
@@ -697,6 +702,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/01/httpwl.html" rel="prev" title="给女朋友讲HTTP协议 | 网络基础">
+                给女朋友讲HTTP协议 | 网络基础 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -777,7 +786,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -788,7 +797,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -799,7 +808,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -947,7 +956,7 @@ show_date_time();
     
 <br>
 
-  <span class="post-count">&nbsp;博客全站共21.7k字</span>
+  <span class="post-count">&nbsp;博客全站共23.5k字</span>
   
 </div> 
 

@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[给女朋友讲HTTP协议 | 网络基础]]></title>
+    <url>%2F2019%2F01%2Fhttpwl.html</url>
+    <content type="text"><![CDATA[TCP/IP协议族计算机与网络设备要相互通信，双方就必须基于相同的方法。比如，如何探测到通信目标、由哪一边先发起通信、使用哪种语言进行通信、怎样结束通信等规则都需要事先确定。不同的硬件、操作系统之间的通信，所有的这一切都需要一种规则。而我们就把这种规则称为协议（protocol）。 TCP/IP的分层把 TCP/IP 层次化是有好处的。比如，如果互联网只由一个协议统筹，某个地方需要改变计时，就必须把所有部分整体替换掉。而分层之后只需把变动的层替换掉即可。把各层之间的接口部分规划好之后，每个层次内部的设计就能够自由改动了。值得一提的是，层次化之后，设计也变得相对简单了。处于应用层上的应用可以只考虑分派给自己的任务，而不需要弄清对方在地球上哪个地方、对方的传输路线是怎样的、是否能确保传输送达等问题。 停留在教学模型阶段的OSI七层模型OSI参考模型：（Open System Interconnect 开放系统互连参考模型）。 OSI七层模型从上往下分别是： 第7层：应用层。各种应用程序协议，如HTTP、FTP、SMTP、POP3。 第6层：表示层。信息的语法语义以及它们的关联，如加密解密、转换翻译、压缩解压缩。 第5层：会话层。不同机器上的用户之间建立及管理回话。 第4层：传输层。接受上一层数据，在必要时把数据进行分割，并将这些数据交给网络层，且保证这些数据段有效到达对端。 第3层：网络层。控制子网的运行，如分组传输、路由选择。 第2层：数据链路层。物理寻址，同时将原始比特流转变为逻辑传输线路。 第1层：物理层。机械、电子、定时接口通信信道上的原始比特流传输。 这一部分看不懂也没事，毕竟就是因为它太复杂导致在实际生产中没有使用。哈哈哈… 实际使用的四层模型 TCP/IP 协议族按层次分别分为以下 4 层：应用层、传输层、网络层和数据链路层。 第4层：应用层。应用层决定了向用户提供应用服务时通信的活动。TCP/IP 协议族内预存了各类通用的应用服务。比如，FTP（FileTransfer Protocol，文件传输协议）和 DNS（Domain Name System，域名系统）服务就是其中两类。HTTP 协议也处于该层。 第3层：传输层。传输层对上层应用层，提供处于网络连接中的两台计算机之间的数据传输。在传输层有两个性质不同的协议：TCP（Transmission ControlProtocol，传输控制协议）和 UDP（User Data Protocol，用户数据报协议）。 第2层：网络层。（又名网络互连层）网络层用来处理在网络上流动的数据包。数据包是网络传输的最小数据单位。该层规定了通过怎样的路径（所谓的传输路线）到达对方计算机，并把数据包传送给对方。与对方计算机之间通过多台计算机或网络设备进行传输时，网络层所起的作用就是在众多的选项内选择一条传输路线。 第1层：数据链路层。（链路层，网络接口层）用来处理连接网络的硬件部分。包括控制操作系统、硬件的设备驱动、NIC（Network Interface Card，网络适配器，即网卡），及光纤等物理可见部分（还包括连接器等一切传输媒介）。硬件上的范畴均在链路层的作用范围之内。 通信传输流 发送端在层与层之间传输数据时，每经过一层时必定会被打上一个该层所属的首部信息。反之，接收端在层与层传输数据时，每经过一层时会把对应的首部消去。这种把数据信息包装起来的做法称为封装（encapsulate）。 与HTTP关系密切的三个协议负责传输的IP协议IP（Internet Protocol）网际协议位于网络层。Internet Protocol这个名字有点恐怖哈，不过IP协议的的确确是很重要的。 IP 协议的作用是把各种数据包传送给对方。而要保证确实传送到对方那里，则需要满足各类条件。其中两个重要的条件是 IP 地址和 MAC地址（Media Access Control Address）。IP 地址指明了节点被分配到的地址，MAC 地址是指网卡所属的固定地址。IP 地址可以和 MAC 地址进行配对。IP 地址可变换，但 MAC地址基本上不会更改。 确保可靠性的TCP协议TCP 位于传输层，提供可靠的字节流服务。 所谓的字节流服务（Byte Stream Service）是指，为了方便传输，将大块数据分割成以报文段（segment）为单位的数据包进行管理。而可靠的传输服务是指，能够把数据准确可靠地传给对方。一言以蔽之，TCP 协议为了更容易传送大数据才把数据分割，而且 TCP 协议能够确认数据最终是否送达到对方。 为了准确无误地将数据送达目标处，TCP 协议采用了三次握手（three-way handshaking）策略。用 TCP 协议把数据包送出去后，TCP不会对传送后的情况置之不理，它一定会向对方确认是否成功送达。握手过程中使用了 TCP 的标志（flag） —— SYN（synchronize） 和ACK（acknowledgement）。发送端首先发送一个带 SYN 标志的数据包给对方。接收端收到后，回传一个带有 SYN/ACK 标志的数据包以示传达确认信息。最后，发送端再回传一个带 ACK 标志的数据包，代表“握手”结束。若在握手过程中某个阶段莫名中断，TCP 协议会再次以相同的顺序发送相同的数据包。断开的时候则是采用四次挥手。 负责域名 解析的DNS服务DNS（Domain Name System）服务是和 HTTP 协议一样位于应用层的协议。它提供域名到 IP 地址之间的解析服务。用户通常使用主机名或域名来访问对方的计算机，而不是直接通过 IP地址访问。因为与 IP 地址的一组纯数字相比，用字母配合数字的表示形式来指定计算机名更符合人类的记忆习惯。但要让计算机去理解名称，相对而言就变得困难了。因为计算机更擅长处理一长串数字。为了解决上述的问题，DNS 服务应运而生。DNS 协议提供通过域名查找 IP 地址，或逆向从 IP 地址反查域名的服务。]]></content>
+      <categories>
+        <category>网络</category>
+        <category>http</category>
+      </categories>
+      <tags>
+        <tag>网络</tag>
+        <tag>http</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Vue组件-爬取页面表格中的数据并保存为csv文件]]></title>
     <url>%2F2019%2F01%2Fgettabledata.html</url>
-    <content type="text"><![CDATA[背景实际开发过程中需要将前端以表格形式展示的数据保存为csv格式的文件，由于数据涉及到的种类比较多，格式化都是放在前端进行的，所以后端以接口下载的形式返回csv文件会比较麻烦，于是想着直接写个组件爬取页面中表格内的数据。 开发框架：Vue+Webpack+Element-UI 实现分析首先分析一下涉及到的知识点，其实涉及到的知识点也比较简单： 获取页面节点信息获取页面数据了解csv文件的格式要求保存为csv文件并下载 获取页面节点信息 首先是获取页面的节点规律，这点很简单，直接找到需要爬取的页面，打开开发者工具，使用element页面查看即可。获取节点规律即简单又重要，只有清晰的了解页面的结构才能更加直接快捷的获取数据。 获取页面数据 了解了页面的HTML结构之后我们就可以针对性的书写循环获取页面中的数据了。 了解csv文件的格式要求 这里是要保存为csv格式的文件，所以需要先搞清楚csv文件的格式要求，csv文件是使用逗号区分列，使用‘\r\n’区分行。 保存为csv文件并下载 了解了csv文件的格式要求之后之后我们就可以直接保存了，这里下载的话可以将数据先拼接成字符串，然后再使用Blob，最后动态生成a标签的方式进行。不了解Blob？猛戳这里。 注意事项： 本次实现的都是在很特定的页面爬取数据的方式，需要用在其他不同页面还需要更改扩展代码使其更加通用 注意使用双引号将每一个拼接的数据包起来，避免转义 HTML了解原理之后就直接开始撸，新建downloadToCsv.vue文件 code： 12345678910111213&lt;template&gt; &lt;el-button class="download" @click="downloadTable" v-show="toTopShow" type="primary" plain icon="el-icon-download" size="mini" &gt; 保存数据为csv文件 &lt;/el-button&gt;&lt;/template&gt; CSScode： 1234567&lt;style scoped lang="scss"&gt;.download&#123; position: absolute; right: 260px; top: 25px;&#125;&lt;/style&gt; JavaScriptcode： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152 methods: &#123; // 转义br和&gt; transferred(data) &#123; return data.replace(/&lt;br&gt;/g, "\r\n").replace(/&amp;gt;/g, "&gt;"); &#125;, downloadTable() &#123; let fileName = Date.now() + ".csv";//使用当前时间戳作为文件名 var columnDelimiter = ","; //列分割符 var lineDelimiter = "\r\n"; //行分割符 var table__header = document.getElementsByClassName( "el-table__header" )[0];//获取表头 var table__body = document.getElementsByClassName("el-table__body")[0];//获取tbody var head = table__header.tHead; let result = "";// 最终结果的字符串 var ths = head.getElementsByTagName("span"); for (let i = 0, l = ths.length; i &lt; l; i++) &#123; result += this.transferred('"' + ths[i].innerHTML + '"') + columnDelimiter;//每一列用逗号分隔 &#125; result += lineDelimiter;// 每一行使用"\r\n"分隔 var trs = table__body.getElementsByTagName("tr"); for (let i = 0, l = trs.length; i &lt; l; i++) &#123; let spandata = trs[i].getElementsByTagName("span"); for (let i = 0, l = spandata.length; i &lt; l; i++) &#123; result += this.transferred('"' + spandata[i].innerHTML + '"') + columnDelimiter; &#125; result += lineDelimiter; &#125; var blob = new Blob(["\uFEFF" + result], &#123; type: "text/csv;" &#125;);//记得将编码格式设置一下，避免最终下载的文件出现乱码 var downloadLink = document.createElement("a"); if ("download" in downloadLink) &#123; var url = URL.createObjectURL(blob); downloadLink.href = url; downloadLink.download = fileName; downloadLink.hidden = true; document.body.appendChild(downloadLink); downloadLink.click(); document.body.removeChild(downloadLink); &#125; else &#123; if (navigator.msSaveBlob) &#123; //IE10+ navigator.msSaveBlob(blob, fileName); &#125; &#125; &#125; &#125;, mounted() &#123;&#125;&#125;;&lt;/script&gt; 大功告成！]]></content>
+    <content type="text"><![CDATA[背景实际开发过程中需要将前端以表格形式展示的数据保存为csv格式的文件，由于数据涉及到的种类比较多，格式化都是放在前端进行的，所以后端以接口下载的形式返回csv文件会比较麻烦，于是想着直接写个组件爬取页面中表格内的数据。 开发框架：Vue+Webpack+Element-UI 实现分析首先分析一下涉及到的知识点，其实涉及到的知识点也比较简单： 获取页面节点信息 获取页面数据 了解csv文件的格式要求 保存为csv文件并下载 1.获取页面节点信息 首先是获取页面的节点规律，这点很简单，直接找到需要爬取的页面，打开开发者工具，使用element页面查看即可。获取节点规律即简单又重要，只有清晰的了解页面的结构才能更加直接快捷的获取数据。 2.获取页面数据 了解了页面的HTML结构之后我们就可以针对性的书写循环获取页面中的数据了。 3.了解csv文件的格式要求 这里是要保存为csv格式的文件，所以需要先搞清楚csv文件的格式要求，csv文件是使用逗号区分列，使用‘\r\n’区分行。 4.保存为csv文件并下载 了解了csv文件的格式要求之后之后我们就可以直接保存了，这里下载的话可以将数据先拼接成字符串，然后再使用Blob，最后动态生成a标签的方式进行。不了解Blob？猛戳这里。 注意事项： 本次实现的都是在很特定的页面爬取数据的方式，需要用在其他不同页面还需要更改扩展代码使其更加通用 注意使用双引号将每一个拼接的数据包起来，避免转义 HTML了解原理之后就直接开始撸，新建downloadToCsv.vue文件 code： 12345678910111213&lt;template&gt; &lt;el-button class="download" @click="downloadTable" v-show="toTopShow" type="primary" plain icon="el-icon-download" size="mini" &gt; 保存数据为csv文件 &lt;/el-button&gt;&lt;/template&gt; CSScode： 1234567&lt;style scoped lang="scss"&gt;.download&#123; position: absolute; right: 260px; top: 25px;&#125;&lt;/style&gt; JavaScriptcode： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152 methods: &#123; // 转义br和&gt; transferred(data) &#123; return data.replace(/&lt;br&gt;/g, "\r\n").replace(/&amp;gt;/g, "&gt;"); &#125;, downloadTable() &#123; let fileName = Date.now() + ".csv";//使用当前时间戳作为文件名 var columnDelimiter = ","; //列分割符 var lineDelimiter = "\r\n"; //行分割符 var table__header = document.getElementsByClassName( "el-table__header" )[0];//获取表头 var table__body = document.getElementsByClassName("el-table__body")[0];//获取tbody var head = table__header.tHead; let result = "";// 最终结果的字符串 var ths = head.getElementsByTagName("span"); for (let i = 0, l = ths.length; i &lt; l; i++) &#123; result += this.transferred('"' + ths[i].innerHTML + '"') + columnDelimiter;//每一列用逗号分隔 &#125; result += lineDelimiter;// 每一行使用"\r\n"分隔 var trs = table__body.getElementsByTagName("tr"); for (let i = 0, l = trs.length; i &lt; l; i++) &#123; let spandata = trs[i].getElementsByTagName("span"); for (let i = 0, l = spandata.length; i &lt; l; i++) &#123; result += this.transferred('"' + spandata[i].innerHTML + '"') + columnDelimiter; &#125; result += lineDelimiter; &#125; var blob = new Blob(["\uFEFF" + result], &#123; type: "text/csv;" &#125;);//记得将编码格式设置一下，避免最终下载的文件出现乱码 var downloadLink = document.createElement("a"); if ("download" in downloadLink) &#123; var url = URL.createObjectURL(blob); downloadLink.href = url; downloadLink.download = fileName; downloadLink.hidden = true; document.body.appendChild(downloadLink); downloadLink.click(); document.body.removeChild(downloadLink); &#125; else &#123; if (navigator.msSaveBlob) &#123; //IE10+ navigator.msSaveBlob(blob, fileName); &#125; &#125; &#125; &#125;, mounted() &#123;&#125;&#125;;&lt;/script&gt; 大功告成！]]></content>
       <categories>
         <category>JavaScript</category>
         <category>Vue</category>
@@ -47,11 +60,11 @@
       </categories>
       <tags>
         <tag>JavaScript</tag>
+        <tag>http</tag>
         <tag>ES6</tag>
         <tag>promise</tag>
         <tag>ajax</tag>
         <tag>node</tag>
-        <tag>http</tag>
       </tags>
   </entry>
   <entry>
@@ -62,8 +75,8 @@
         <category>JavaScript</category>
       </categories>
       <tags>
-        <tag>算法</tag>
         <tag>JavaScript</tag>
+        <tag>算法</tag>
         <tag>排序算法</tag>
         <tag>快速排序</tag>
         <tag>归并排序</tag>
